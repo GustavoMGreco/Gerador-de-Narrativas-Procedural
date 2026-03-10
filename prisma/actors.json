@@ -1,0 +1,602 @@
+[
+  {
+    "name": "Aldric Dunnmore",
+    "role": "Mayor",
+    "level": 12,
+    "hostility": false
+  },
+  {
+    "name": "Seraphine Coldwell",
+    "role": "Mayor",
+    "level": 9,
+    "hostility": false
+  },
+  {
+    "name": "Bryndas Holt",
+    "role": "Mayor",
+    "level": 15,
+    "hostility": false
+  },
+  {
+    "name": "Mervyn Ashcroft",
+    "role": "Mayor",
+    "level": 11,
+    "hostility": true
+  },
+  {
+    "name": "Isolde Wraithborne",
+    "role": "Mayor",
+    "level": 8,
+    "hostility": false
+  },
+  {
+    "name": "Torben Greymantle",
+    "role": "Blacksmith",
+    "level": 22,
+    "hostility": false
+  },
+  {
+    "name": "Dalla Ironwhisper",
+    "role": "Blacksmith",
+    "level": 31,
+    "hostility": false
+  },
+  {
+    "name": "Oswin Emberforge",
+    "role": "Blacksmith",
+    "level": 18,
+    "hostility": false
+  },
+  {
+    "name": "Gareth Soothand",
+    "role": "Blacksmith",
+    "level": 27,
+    "hostility": true
+  },
+  {
+    "name": "Hilda Cindermaul",
+    "role": "Blacksmith",
+    "level": 35,
+    "hostility": false
+  },
+  {
+    "name": "Ulfric Brandanvil",
+    "role": "Blacksmith",
+    "level": 40,
+    "hostility": false
+  },
+  {
+    "name": "Nessa Thornforge",
+    "role": "Blacksmith",
+    "level": 14,
+    "hostility": false
+  },
+  {
+    "name": "Calder Grimweld",
+    "role": "Guard",
+    "level": 16,
+    "hostility": false
+  },
+  {
+    "name": "Rowena Duskshield",
+    "role": "Guard",
+    "level": 20,
+    "hostility": false
+  },
+  {
+    "name": "Bran Hollowmark",
+    "role": "Guard",
+    "level": 13,
+    "hostility": true
+  },
+  {
+    "name": "Sigrid Vanthorpe",
+    "role": "Guard",
+    "level": 19,
+    "hostility": false
+  },
+  {
+    "name": "Edwyn Pallwall",
+    "role": "Guard",
+    "level": 24,
+    "hostility": false
+  },
+  {
+    "name": "Marta Coldspear",
+    "role": "Guard",
+    "level": 17,
+    "hostility": true
+  },
+  {
+    "name": "Aldous Greyveil",
+    "role": "Guard",
+    "level": 21,
+    "hostility": false
+  },
+  {
+    "name": "Petra Nightwatch",
+    "role": "Guard",
+    "level": 15,
+    "hostility": false
+  },
+  {
+    "name": "Cormac Dunwall",
+    "role": "Guard",
+    "level": 28,
+    "hostility": false
+  },
+  {
+    "name": "Theda Irongate",
+    "role": "Guard",
+    "level": 22,
+    "hostility": true
+  },
+  {
+    "name": "Leofric Ashbourne",
+    "role": "Guard",
+    "level": 18,
+    "hostility": false
+  },
+  {
+    "name": "Wulfhild Stonebrace",
+    "role": "Guard",
+    "level": 25,
+    "hostility": false
+  },
+  {
+    "name": "Cynric Dreadmoor",
+    "role": "Alchemist",
+    "level": 33,
+    "hostility": false
+  },
+  {
+    "name": "Vesper Nightshade",
+    "role": "Alchemist",
+    "level": 41,
+    "hostility": true
+  },
+  {
+    "name": "Aldwyn Murkveil",
+    "role": "Alchemist",
+    "level": 29,
+    "hostility": false
+  },
+  {
+    "name": "Sibyl Rotherwick",
+    "role": "Alchemist",
+    "level": 37,
+    "hostility": false
+  },
+  {
+    "name": "Erasmus Gallowmere",
+    "role": "Alchemist",
+    "level": 45,
+    "hostility": true
+  },
+  {
+    "name": "Isolde Brinewick",
+    "role": "Alchemist",
+    "level": 22,
+    "hostility": false
+  },
+  {
+    "name": "Morwenna Ashveil",
+    "role": "Alchemist",
+    "level": 38,
+    "hostility": false
+  },
+  {
+    "name": "Drest Coldvial",
+    "role": "Alchemist",
+    "level": 31,
+    "hostility": true
+  },
+  {
+    "name": "Fenwick Grimtallow",
+    "role": "Innkeeper",
+    "level": 7,
+    "hostility": false
+  },
+  {
+    "name": "Berta Muddlemug",
+    "role": "Innkeeper",
+    "level": 5,
+    "hostility": false
+  },
+  {
+    "name": "Sven Barrelkeep",
+    "role": "Innkeeper",
+    "level": 9,
+    "hostility": false
+  },
+  {
+    "name": "Osra Hollowhearthh",
+    "role": "Innkeeper",
+    "level": 6,
+    "hostility": true
+  },
+  {
+    "name": "Dafydd Pallcandle",
+    "role": "Innkeeper",
+    "level": 11,
+    "hostility": false
+  },
+  {
+    "name": "Millie Greyroost",
+    "role": "Innkeeper",
+    "level": 4,
+    "hostility": false
+  },
+  {
+    "name": "Hadwin Tarnkeep",
+    "role": "Innkeeper",
+    "level": 8,
+    "hostility": true
+  },
+  {
+    "name": "Elsa Coldcroft",
+    "role": "Innkeeper",
+    "level": 10,
+    "hostility": false
+  },
+  {
+    "name": "Corvin Dustmantle",
+    "role": "Merchant",
+    "level": 14,
+    "hostility": false
+  },
+  {
+    "name": "Alys Silverthread",
+    "role": "Merchant",
+    "level": 19,
+    "hostility": false
+  },
+  {
+    "name": "Brennan Shiftcloak",
+    "role": "Merchant",
+    "level": 23,
+    "hostility": true
+  },
+  {
+    "name": "Ysabel Goldmere",
+    "role": "Merchant",
+    "level": 17,
+    "hostility": false
+  },
+  {
+    "name": "Torold Duskbarter",
+    "role": "Merchant",
+    "level": 28,
+    "hostility": false
+  },
+  {
+    "name": "Mildred Ashenscale",
+    "role": "Merchant",
+    "level": 12,
+    "hostility": false
+  },
+  {
+    "name": "Pell Grimcoin",
+    "role": "Merchant",
+    "level": 31,
+    "hostility": true
+  },
+  {
+    "name": "Avice Hollowpurse",
+    "role": "Merchant",
+    "level": 20,
+    "hostility": false
+  },
+  {
+    "name": "Dunstan Saltroad",
+    "role": "Merchant",
+    "level": 16,
+    "hostility": false
+  },
+  {
+    "name": "Rowena Cairnmarket",
+    "role": "Merchant",
+    "level": 25,
+    "hostility": true
+  },
+  {
+    "name": "Aldric Tarnwheel",
+    "role": "Merchant",
+    "level": 22,
+    "hostility": false
+  },
+  {
+    "name": "Sable Dreadwares",
+    "role": "Merchant",
+    "level": 35,
+    "hostility": true
+  },
+  {
+    "name": "Jorin Ashblade",
+    "role": "Adventurer",
+    "level": 28,
+    "hostility": false
+  },
+  {
+    "name": "Kessa Voidwalker",
+    "role": "Adventurer",
+    "level": 44,
+    "hostility": true
+  },
+  {
+    "name": "Brand Duskmantle",
+    "role": "Adventurer",
+    "level": 19,
+    "hostility": false
+  },
+  {
+    "name": "Lyra Coldveil",
+    "role": "Adventurer",
+    "level": 37,
+    "hostility": true
+  },
+  {
+    "name": "Hadric Grimthorn",
+    "role": "Adventurer",
+    "level": 33,
+    "hostility": false
+  },
+  {
+    "name": "Isolde Shadowmarch",
+    "role": "Adventurer",
+    "level": 48,
+    "hostility": true
+  },
+  {
+    "name": "Wulfgar Ashenpath",
+    "role": "Adventurer",
+    "level": 22,
+    "hostility": false
+  },
+  {
+    "name": "Niamh Dreadfall",
+    "role": "Adventurer",
+    "level": 41,
+    "hostility": true
+  },
+  {
+    "name": "Corwyn Pallblade",
+    "role": "Adventurer",
+    "level": 15,
+    "hostility": false
+  },
+  {
+    "name": "Edda Nightroam",
+    "role": "Adventurer",
+    "level": 50,
+    "hostility": true
+  },
+  {
+    "name": "Sven Hollowstrike",
+    "role": "Adventurer",
+    "level": 30,
+    "hostility": false
+  },
+  {
+    "name": "Mira Coldedge",
+    "role": "Adventurer",
+    "level": 26,
+    "hostility": false
+  },
+  {
+    "name": "Thorn Wraith-Seeker",
+    "role": "Adventurer",
+    "level": 45,
+    "hostility": true
+  },
+  {
+    "name": "Bera Duskblade",
+    "role": "Adventurer",
+    "level": 17,
+    "hostility": false
+  },
+  {
+    "name": "Aldric Grimstrike",
+    "role": "Adventurer",
+    "level": 39,
+    "hostility": true
+  },
+  {
+    "name": "Fenris Ashwalker",
+    "role": "Adventurer",
+    "level": 23,
+    "hostility": false
+  },
+  {
+    "name": "Catryn Pallshroud",
+    "role": "Adventurer",
+    "level": 34,
+    "hostility": false
+  },
+  {
+    "name": "Osric Dreadbourne",
+    "role": "Adventurer",
+    "level": 47,
+    "hostility": true
+  },
+  {
+    "name": "Elara Coldveil",
+    "role": "Adventurer",
+    "level": 12,
+    "hostility": false
+  },
+  {
+    "name": "Brennan Murkshadow",
+    "role": "Adventurer",
+    "level": 42,
+    "hostility": true
+  },
+  {
+    "name": "Sigurd Ashmantle",
+    "role": "Adventurer",
+    "level": 29,
+    "hostility": false
+  },
+  {
+    "name": "Hedda Grimfall",
+    "role": "Adventurer",
+    "level": 36,
+    "hostility": true
+  },
+  {
+    "name": "Lothar Duskpath",
+    "role": "Adventurer",
+    "level": 21,
+    "hostility": false
+  },
+  {
+    "name": "Vesper Coldthorn",
+    "role": "Adventurer",
+    "level": 43,
+    "hostility": true
+  },
+  {
+    "name": "Alwyn Pallmarch",
+    "role": "Adventurer",
+    "level": 18,
+    "hostility": false
+  },
+  {
+    "name": "Dregan Voidstep",
+    "role": "Adventurer",
+    "level": 49,
+    "hostility": true
+  },
+  {
+    "name": "Sable Ashgrim",
+    "role": "Adventurer",
+    "level": 31,
+    "hostility": false
+  },
+  {
+    "name": "Ragnar Dreadmantle",
+    "role": "Adventurer",
+    "level": 38,
+    "hostility": true
+  },
+  {
+    "name": "Ingrid Hollowveil",
+    "role": "Adventurer",
+    "level": 24,
+    "hostility": false
+  },
+  {
+    "name": "Cedric Nightedge",
+    "role": "Adventurer",
+    "level": 46,
+    "hostility": true
+  },
+  {
+    "name": "Morrigan Ashfall",
+    "role": "Adventurer",
+    "level": 27,
+    "hostility": false
+  },
+  {
+    "name": "Halvard Grimroam",
+    "role": "Adventurer",
+    "level": 40,
+    "hostility": true
+  },
+  {
+    "name": "Tilda Duskwhisper",
+    "role": "Adventurer",
+    "level": 16,
+    "hostility": false
+  },
+  {
+    "name": "Cael Pallstrike",
+    "role": "Adventurer",
+    "level": 35,
+    "hostility": true
+  },
+  {
+    "name": "Neria Coldstep",
+    "role": "Adventurer",
+    "level": 20,
+    "hostility": false
+  },
+  {
+    "name": "Ulfric Shadowbane",
+    "role": "Adventurer",
+    "level": 44,
+    "hostility": true
+  },
+  {
+    "name": "Briseis Ashveil",
+    "role": "Adventurer",
+    "level": 25,
+    "hostility": false
+  },
+  {
+    "name": "Torald Grimedge",
+    "role": "Adventurer",
+    "level": 32,
+    "hostility": true
+  },
+  {
+    "name": "Gwynna Duskmantle",
+    "role": "Adventurer",
+    "level": 14,
+    "hostility": false
+  },
+  {
+    "name": "Reinar Coldwrath",
+    "role": "Adventurer",
+    "level": 48,
+    "hostility": true
+  },
+  {
+    "name": "Sif Hollowpath",
+    "role": "Adventurer",
+    "level": 22,
+    "hostility": false
+  },
+  {
+    "name": "Aldred Grimveil",
+    "role": "Adventurer",
+    "level": 37,
+    "hostility": true
+  },
+  {
+    "name": "Elspeth Ashgrave",
+    "role": "Adventurer",
+    "level": 19,
+    "hostility": false
+  },
+  {
+    "name": "Draven Duskfall",
+    "role": "Adventurer",
+    "level": 50,
+    "hostility": true
+  },
+  {
+    "name": "Brynja Pallwhisper",
+    "role": "Adventurer",
+    "level": 28,
+    "hostility": false
+  },
+  {
+    "name": "Keldric Nightwarden",
+    "role": "Guard",
+    "level": 30,
+    "hostility": false
+  },
+  {
+    "name": "Aelindra Murkveil",
+    "role": "Alchemist",
+    "level": 26,
+    "hostility": false
+  },
+  {
+    "name": "Svara Grimtallow",
+    "role": "Blacksmith",
+    "level": 24,
+    "hostility": false
+  }
+]

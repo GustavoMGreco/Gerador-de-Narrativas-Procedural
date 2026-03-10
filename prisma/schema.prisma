@@ -1,0 +1,68 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum ActorRole {
+  Blacksmith
+  Guard
+  Alchemist
+  Innkeeper
+  Adventurer
+  Merchant
+  Mayor
+
+  @@map("actor_roles")
+}
+
+enum ActionType {
+  Kill
+  Gather
+  Escort
+  Investigate
+  Betray
+  Negotiate
+  Intimidate
+  Trade
+  Heal
+
+  @@map("action_types")
+}
+
+model Actor {
+  id          String @id @default(uuid())
+  name        String
+  role        ActorRole
+  level       Int
+  hostility   Boolean
+  quests      Quest[]
+
+  @@map("actors")
+}
+
+model Objective {
+  id         String @id @default(uuid())
+  action     ActionType
+  quantity   Int
+  targetId   String @map("target_id")
+  quest      Quest @relation(fields: [questId], references: [id])
+  questId    String @map("quest_id")
+
+  @@map("objectives")
+}
+
+model Quest {
+  id            String @id @default(uuid())
+  title         String
+  description   String
+  actor         Actor @relation(fields: [actorId], references: [id])
+  actorId       String @map("actor_id")
+  objectives    Objective[]
+  goldReward    Int @map("gold_reward")
+  xpReward      Int @map("xp_reward")
+
+  @@map("quests")
+}
