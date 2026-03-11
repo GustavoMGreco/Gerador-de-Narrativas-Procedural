@@ -1,7 +1,29 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
-import { Actor, Quest, Objective, ActionType } from '@prisma/client';
+import { Actor, Quest, Objective, ActionType, ActorRole } from '@prisma/client';
 import * as crypto from 'crypto';
+
+const roleTranslator: Record<ActorRole, string> = {
+  Blacksmith: 'Ferreiro',
+  Guard: 'Guarda',
+  Alchemist: 'Alquimista',
+  Innkeeper: 'Taverneiro',
+  Adventurer: 'Aventureiro',
+  Merchant: 'Mercador',
+  Mayor: 'Prefeito',
+}
+
+const actionTranslator: Record<ActionType, string> = {
+  Kill: 'Matar',
+  Gather: 'Coletar',
+  Escort: 'Escoltar',
+  Investigate: 'Investigar',
+  Betray: 'Trair',
+  Negotiate: 'Negociar',
+  Intimidate: 'Intimidar',
+  Trade: 'Trocar',
+  Heal: 'Curar',
+}
 
 @Injectable()
 export class QuestsService {
@@ -18,18 +40,22 @@ export class QuestsService {
     return actor;
   }
 
-  public generateObjectives(num: number, questId: string): Objective[] {
-    const objectives: Objective[] = [];
+  public generateObjectives(num: number, questId: string): (Objective & { description: string })[] {
+    const objectives: (Objective & { description: string })[] = [];
     const listActions = Object.values(ActionType);
 
     for (let i = 0; i < num; i++) {
       const randomActionIndex = Math.floor(Math.random() * listActions.length);
-      const objective: Objective = {
+      const rawAction = listActions[randomActionIndex];
+      const generatedQuantity = Math.floor(Math.random() * 10) + 1;
+
+      const objective = {
         id: crypto.randomUUID(),
-        action: listActions[randomActionIndex],
-        quantity: Math.floor(Math.random() * 10) + 1,
+        action: rawAction,
+        quantity: generatedQuantity,
         targetId: crypto.randomUUID(),
-        questId: questId
+        questId: questId,
+        description: `${actionTranslator[rawAction]} ${generatedQuantity} alvo(s)` 
       };
       objectives.push(objective);
     }
@@ -37,7 +63,7 @@ export class QuestsService {
     return objectives;
   }
 
-  public async generateQuest(): Promise<Quest & { objectives: Objective[] }> {
+  public async generateQuest(): Promise<Quest & { objectives: (Objective & { description: string })[] }> {
     const actor = await this.sortActor();
     const questId = crypto.randomUUID();
 
@@ -46,8 +72,8 @@ export class QuestsService {
 
     const quest = {
       id: questId,
-      title: `Missão do ${actor.role} perdido`,
-      description: `O ${actor.role} ${actor.name} precisa de sua ajuda para encontrar a saída da floresta.`,
+      title: `Missão do ${roleTranslator[actor.role]} perdido`,
+      description: `O ${roleTranslator[actor.role]} ${actor.name} precisa de sua ajuda para encontrar a saída da floresta.`,
       actorId: actor.id,
       objectives: this.generateObjectives(2, questId),
       goldReward: gold,
