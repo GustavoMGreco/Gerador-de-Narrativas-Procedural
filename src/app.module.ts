@@ -9,9 +9,9 @@ import { PrismaModule } from './prisma/prisma.module';
     ConfigModule.forRoot({
       isGlobal: true,
     }),
-    ActorsModule, 
-    QuestsModule, 
-    PrismaModule
+    ActorsModule,
+    QuestsModule,
+    PrismaModule,
   ],
   controllers: [],
   providers: [],
