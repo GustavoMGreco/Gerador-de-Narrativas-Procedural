@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
-import { Actor, Quest, Objective, ActionType, ActorRole } from '@prisma/client';
+import { Actor, ActionType, ActorRole } from '@prisma/client';
+import { ObjectiveDto, QuestDto } from './dto/quest-response.dto';
 import * as crypto from 'crypto';
 
 const roleTranslator: Record<ActorRole, string> = {
@@ -11,7 +12,7 @@ const roleTranslator: Record<ActorRole, string> = {
   Adventurer: 'Aventureiro',
   Merchant: 'Mercador',
   Mayor: 'Prefeito',
-}
+};
 
 const actionTranslator: Record<ActionType, string> = {
   Kill: 'Matar',
@@ -23,7 +24,7 @@ const actionTranslator: Record<ActionType, string> = {
   Intimidate: 'Intimidar',
   Trade: 'Trocar',
   Heal: 'Curar',
-}
+};
 
 @Injectable()
 export class QuestsService {
@@ -36,12 +37,12 @@ export class QuestsService {
       skip: randomNumber,
     });
 
-    if (!actor) throw new Error("Nenhum ator encontrado no banco de dados.");
+    if (!actor) throw new Error('Nenhum ator encontrado no banco de dados.');
     return actor;
   }
 
-  public generateObjectives(num: number, questId: string): (Objective & { description: string })[] {
-    const objectives: (Objective & { description: string })[] = [];
+  public generateObjectives(num: number, questId: string): ObjectiveDto[] {
+    const objectives: ObjectiveDto[] = [];
     const listActions = Object.values(ActionType);
 
     for (let i = 0; i < num; i++) {
@@ -55,7 +56,7 @@ export class QuestsService {
         quantity: generatedQuantity,
         targetId: crypto.randomUUID(),
         questId: questId,
-        description: `${actionTranslator[rawAction]} ${generatedQuantity} alvo(s)` 
+        description: `${actionTranslator[rawAction]} ${generatedQuantity} alvo(s)`,
       };
       objectives.push(objective);
     }
@@ -63,7 +64,7 @@ export class QuestsService {
     return objectives;
   }
 
-  public async generateQuest(): Promise<Quest & { objectives: (Objective & { description: string })[] }> {
+  public async generateQuest(): Promise<QuestDto> {
     const actor = await this.sortActor();
     const questId = crypto.randomUUID();
 
@@ -77,8 +78,8 @@ export class QuestsService {
       actorId: actor.id,
       objectives: this.generateObjectives(2, questId),
       goldReward: gold,
-      xpReward: xp
-    }
+      xpReward: xp,
+    };
 
     return quest;
   }
