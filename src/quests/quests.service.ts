@@ -106,4 +106,32 @@ export class QuestsService {
 
     return quest;
   }
+
+  async findAll(): Promise<QuestDto[]> {
+    const rawQuests = await this.prisma.quest.findMany({
+      include: {
+        actor: true,
+        objectives: true,
+      },
+    });
+
+    const completeQuests: QuestDto[] = rawQuests.map((quest) => ({
+      id: quest.id,
+      title: quest.title,
+      description: quest.description,
+      actorId: quest.actorId,
+      objectives: quest.objectives.map((obj) => ({
+        id: obj.id,
+        action: obj.action,
+        quantity: obj.quantity,
+        targetId: obj.targetId,
+        questId: obj.questId,
+        description: `${actionTranslator[obj.action]} ${obj.quantity} alvo(s)`,
+      })),
+      goldReward: quest.goldReward,
+      xpReward: quest.xpReward,
+    }));
+
+    return completeQuests;
+  }
 }
