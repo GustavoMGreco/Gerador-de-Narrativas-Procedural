@@ -68,15 +68,38 @@ export class QuestsService {
     const actor = await this.sortActor();
     const questId = crypto.randomUUID();
 
+    const title = `Missão do ${roleTranslator[actor.role]} perdido`;
+    const description = `O ${roleTranslator[actor.role]} ${actor.name} precisa de sua ajuda para encontrar a saída da floresta.`;
+    const objectives = this.generateObjectives(2, questId);
+
     const gold = actor.level * 15;
     const xp = actor.level * 25;
 
+    await this.prisma.quest.create({
+      data: {
+        id: questId,
+        title: title,
+        description: description,
+        actorId: actor.id,
+        objectives: {
+          create: objectives.map((obj) => ({
+            id: obj.id,
+            action: obj.action,
+            quantity: obj.quantity,
+            targetId: obj.targetId,
+          })),
+        },
+        goldReward: gold,
+        xpReward: xp,
+      },
+    });
+
     const quest = {
       id: questId,
-      title: `Missão do ${roleTranslator[actor.role]} perdido`,
-      description: `O ${roleTranslator[actor.role]} ${actor.name} precisa de sua ajuda para encontrar a saída da floresta.`,
+      title: title,
+      description: description,
       actorId: actor.id,
-      objectives: this.generateObjectives(2, questId),
+      objectives: objectives,
       goldReward: gold,
       xpReward: xp,
     };
