@@ -1,6 +1,7 @@
 import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
 import { QuestsService } from './quests.service';
 import { GenerateQuestDto } from './dto/generate-quest.dto';
+import { generate } from 'rxjs';
 
 @Controller('quests')
 export class QuestsController {
@@ -25,5 +26,10 @@ export class QuestsController {
   @Patch(':id/complete')
   async complete(@Param('id') id: string) {
     return this.questsService.completeQuest(id);
+  }
+
+  @Patch(':id/cancel')
+  async cancel(@Param('id') id: string) {
+    return this.questsService.cancelQuest(id);
   }
 }

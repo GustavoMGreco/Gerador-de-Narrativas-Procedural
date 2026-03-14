@@ -243,9 +243,34 @@ export class QuestsService {
         where: { id: quest.heroId },
         data: {
           gold: { increment: quest.goldReward },
-          experience: { increment: quest.xpReward }
+          experience: { increment: quest.xpReward },
+          reputation: { increment: 5 }
         }
       });
     });
+  }
+
+  async cancelQuest(id: string) {
+    const quest = await this.prisma.quest.findUnique({ where: { id } });
+
+    if (!quest || quest.status !== QuestStatus.Accepted) {
+      throw new BadRequestException('Apenas quests aceitas podem ser canceladas.')
+    }
+
+    return this.prisma.$transaction(async (tx) => {
+      await tx.hero.update({
+        where: { id: quest.heroId },
+        data: { reputation: { increment: -10 } }
+      });
+
+      return tx.quest.update({
+        where: { id },
+        data: {
+          status: QuestStatus.Available,
+          goldReward: { increment: -(quest.goldReward * 0.3) },
+          xpReward: { increment: -(quest.xpReward * 0.3) }
+        }
+      })
+    })
   }
 }
