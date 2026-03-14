@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { ActorsModule } from './actors/actors.module';
 import { QuestsModule } from './quests/quests.module';
 import { PrismaModule } from './prisma/prisma.module';
+import { HeroesModule } from './heroes/heroes.module';
 
 @Module({
   imports: [
@@ -12,6 +13,7 @@ import { PrismaModule } from './prisma/prisma.module';
     ActorsModule,
     QuestsModule,
     PrismaModule,
+    HeroesModule,
   ],
   controllers: [],
   providers: [],

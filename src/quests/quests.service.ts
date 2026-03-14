@@ -1,10 +1,10 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { Actor, ActionType, ActorRole } from '@prisma/client';
 import { ObjectiveDto, QuestDto } from './dto/quest-response.dto';
-import { HeroDto } from './dto/generate-quest-request.dto';
 import { friendlyTemplates, hostileTemplates } from './data/narratives.data';
 import * as crypto from 'crypto';
+import { GenerateQuestDto } from './dto/generate-quest.dto';
 
 const roleTranslator: Record<ActorRole, string> = {
   Blacksmith: 'Ferreiro',
@@ -128,12 +128,21 @@ export class QuestsService {
     return objectives;
   }
 
-  public async generateQuest(hero: HeroDto): Promise<QuestDto> {
-    const actor = await this.sortActor(hero.heroLevel, hero.heroReputation);
+  public async generateQuest(dto: GenerateQuestDto): Promise<QuestDto> {
+    const hero = await this.prisma.hero.findUnique({
+      where: {
+        id: dto.heroId
+      }
+    })
+    if (!hero) {
+      throw new NotFoundException('Herói não encontrado no banco de dados.');
+    }
+
+    const actor = await this.sortActor(hero.level, hero.reputation);
     const questId = crypto.randomUUID();
 
     const [title, description] = this.generateNarrative(actor)
-    const objectives = this.generateObjectives(2, questId, hero.heroClass);
+    const objectives = this.generateObjectives(2, questId, hero.class);
 
     const gold = actor.level * 15;
     const xp = actor.level * 25;
@@ -153,8 +162,10 @@ export class QuestsService {
           })),
         },
         goldReward: gold,
-        xpReward: xp
+        xpReward: xp,
+        heroId: hero.id
       },
+  
     });
 
     const quest = {
