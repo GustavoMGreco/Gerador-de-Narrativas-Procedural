@@ -1,6 +1,6 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
-import { Actor, ActionType, ActorRole } from '@prisma/client';
+import { Actor, ActionType, ActorRole, QuestStatus } from '@prisma/client';
 import { ObjectiveDto, QuestDto } from './dto/quest-response.dto';
 import { friendlyTemplates, hostileTemplates } from './data/narratives.data';
 import * as crypto from 'crypto';
@@ -207,5 +207,45 @@ export class QuestsService {
     }));
 
     return completeQuests;
+  };
+
+  async acceptQuest(id: string) {
+    const quest = await this.prisma.quest.findUnique({ where: { id } });
+
+    if (!quest) throw new NotFoundException('Quest não encontrada.');
+    if (quest.status !== QuestStatus.Available) {
+      throw new BadRequestException('Esta quest não pode mais ser aceita.');
+    }
+
+    return this.prisma.quest.update({
+      where: { id },
+      data: { status: QuestStatus.Accepted }
+    });
+  };
+
+  async completeQuest(id: string) {
+    const quest = await this.prisma.quest.findUnique({
+      where: { id },
+      include: { hero: true }
+    });
+
+    if (!quest || quest.status !== QuestStatus.Accepted) {
+      throw new BadRequestException('Apenas quests aceitas podem ser concluídas.');
+    }
+
+    return this.prisma.$transaction(async (tx) => {  // transaction: garante que ou tudo acontece, ou nada acontece
+      await tx.quest.update({
+        where: { id },
+        data: { status: QuestStatus.Completed }
+      });
+
+      return tx.hero.update({
+        where: { id: quest.heroId },
+        data: {
+          gold: { increment: quest.goldReward },
+          experience: { increment: quest.xpReward }
+        }
+      });
+    });
   }
 }

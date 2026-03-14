@@ -1,5 +1,5 @@
 generator client {
-  provider = "prisma-client-js"
+  provider   = "prisma-client-js"
   engineType = "library"
 }
 
@@ -39,6 +39,13 @@ enum HeroClass {
   Rogue
   Mage
   Cleric
+}
+
+enum QuestStatus {
+  Available
+  Accepted
+  Completed
+  Failed
 }
 
 model Hero {
@@ -87,6 +94,7 @@ model Quest {
   xpReward    Int         @map("xp_reward")
   hero        Hero        @relation(fields: [heroId], references: [id])
   heroId      String      @map("hero_id")
+  status      QuestStatus @default(Available)
 
   @@map("quests")
 }

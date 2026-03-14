@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
 import { QuestsService } from './quests.service';
 import { GenerateQuestDto } from './dto/generate-quest.dto';
 
@@ -15,5 +15,15 @@ export class QuestsController {
   @Post('generate')
   public PostQuest(@Body() heroId: GenerateQuestDto) {
     return this.questsService.generateQuest(heroId);
+  }
+
+  @Patch(':id/accept')
+  async accept(@Param('id') id: string) {
+    return this.questsService.acceptQuest(id);
+  }
+
+  @Patch(':id/complete')
+  async complete(@Param('id') id: string) {
+    return this.questsService.completeQuest(id);
   }
 }
