@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { Actor, ActionType, ActorRole } from '@prisma/client';
 import { ObjectiveDto, QuestDto } from './dto/quest-response.dto';
+import { HeroDto } from './dto/generate-quest-request.dto';
 import * as crypto from 'crypto';
 
 const roleTranslator: Record<ActorRole, string> = {
@@ -26,24 +27,59 @@ const actionTranslator: Record<ActionType, string> = {
   Heal: 'Curar',
 };
 
+const actionPool: Record<string, ActionType[]> = {
+  Warrior: [ActionType.Kill, ActionType.Escort, ActionType.Intimidate],
+  Rogue: [ActionType.Betray, ActionType.Investigate, ActionType.Intimidate],
+  Mage: [ActionType.Investigate, ActionType.Gather, ActionType.Kill],
+  Cleric: [ActionType.Heal, ActionType.Escort, ActionType.Negotiate],
+};
+
 @Injectable()
 export class QuestsService {
   constructor(private readonly prisma: PrismaService) {}
 
-  private async sortActor(): Promise<Actor> {
-    const numActors = await this.prisma.actor.count();
+  private async sortActor(
+    heroLevel: number,
+    heroReputation: number,
+  ): Promise<Actor> {
+    const actorFilter = {
+      level: {
+        gte: heroLevel - 5,
+        lte: heroLevel + 5,
+      },
+      hostility: heroReputation < 0,
+    };
+
+    const numActors = await this.prisma.actor.count({ where: actorFilter });
+
+    if (numActors === 0) {
+      throw new Error(`Nenhum ator encontrado para o nível ${heroLevel}.`);
+    }
+
     const randomNumber = Math.floor(Math.random() * numActors);
+
     const actor = await this.prisma.actor.findFirst({
+      where: actorFilter,
       skip: randomNumber,
     });
 
-    if (!actor) throw new Error('Nenhum ator encontrado no banco de dados.');
+    if (!actor) throw new Error('Falha ao sortear o ator.');
     return actor;
   }
 
-  public generateObjectives(num: number, questId: string): ObjectiveDto[] {
+  public generateObjectives(
+    num: number,
+    questId: string,
+    heroClass: string,
+  ): ObjectiveDto[] {
     const objectives: ObjectiveDto[] = [];
-    const listActions = Object.values(ActionType);
+
+    const listActions = actionPool[heroClass] || [
+      // ações padrão caso a classe inserida não seja nenhuma das actionPool
+      ActionType.Gather,
+      ActionType.Trade,
+      ActionType.Investigate,
+    ];
 
     for (let i = 0; i < num; i++) {
       const randomActionIndex = Math.floor(Math.random() * listActions.length);
@@ -64,13 +100,13 @@ export class QuestsService {
     return objectives;
   }
 
-  public async generateQuest(): Promise<QuestDto> {
-    const actor = await this.sortActor();
+  public async generateQuest(hero: HeroDto): Promise<QuestDto> {
+    const actor = await this.sortActor(hero.heroLevel, hero.heroReputation);
     const questId = crypto.randomUUID();
 
     const title = `Missão do ${roleTranslator[actor.role]} perdido`;
     const description = `O ${roleTranslator[actor.role]} ${actor.name} precisa de sua ajuda para encontrar a saída da floresta.`;
-    const objectives = this.generateObjectives(2, questId);
+    const objectives = this.generateObjectives(2, questId, hero.heroClass);
 
     const gold = actor.level * 15;
     const xp = actor.level * 25;

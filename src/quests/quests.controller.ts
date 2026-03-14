@@ -1,5 +1,6 @@
-import { Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { QuestsService } from './quests.service';
+import { type HeroDto } from './dto/generate-quest-request.dto';
 
 @Controller('quests')
 export class QuestsController {
@@ -12,7 +13,7 @@ export class QuestsController {
   }
 
   @Post('generate')
-  public PostQuest() {
-    return this.questsService.generateQuest();
+  public PostQuest(@Body() heroData: HeroDto) {
+    return this.questsService.generateQuest(heroData);
   }
 }
