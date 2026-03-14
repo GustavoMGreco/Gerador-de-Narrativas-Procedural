@@ -3,6 +3,7 @@ import { PrismaService } from 'src/prisma/prisma.service';
 import { Actor, ActionType, ActorRole } from '@prisma/client';
 import { ObjectiveDto, QuestDto } from './dto/quest-response.dto';
 import { HeroDto } from './dto/generate-quest-request.dto';
+import { friendlyTemplates, hostileTemplates } from './data/narratives.data';
 import * as crypto from 'crypto';
 
 const roleTranslator: Record<ActorRole, string> = {
@@ -12,7 +13,7 @@ const roleTranslator: Record<ActorRole, string> = {
   Innkeeper: 'Taverneiro',
   Adventurer: 'Aventureiro',
   Merchant: 'Mercador',
-  Mayor: 'Prefeito',
+  Mayor: 'Prefeito'
 };
 
 const actionTranslator: Record<ActionType, string> = {
@@ -24,30 +25,27 @@ const actionTranslator: Record<ActionType, string> = {
   Negotiate: 'Negociar',
   Intimidate: 'Intimidar',
   Trade: 'Trocar',
-  Heal: 'Curar',
+  Heal: 'Curar'
 };
 
 const actionPool: Record<string, ActionType[]> = {
   Warrior: [ActionType.Kill, ActionType.Escort, ActionType.Intimidate],
   Rogue: [ActionType.Betray, ActionType.Investigate, ActionType.Intimidate],
   Mage: [ActionType.Investigate, ActionType.Gather, ActionType.Kill],
-  Cleric: [ActionType.Heal, ActionType.Escort, ActionType.Negotiate],
+  Cleric: [ActionType.Heal, ActionType.Escort, ActionType.Negotiate]
 };
 
 @Injectable()
 export class QuestsService {
   constructor(private readonly prisma: PrismaService) {}
 
-  private async sortActor(
-    heroLevel: number,
-    heroReputation: number,
-  ): Promise<Actor> {
+  private async sortActor(heroLevel: number, heroReputation: number): Promise<Actor> {
     const actorFilter = {
       level: {
         gte: heroLevel - 5,
-        lte: heroLevel + 5,
+        lte: heroLevel + 5
       },
-      hostility: heroReputation < 0,
+      hostility: heroReputation < 0
     };
 
     const numActors = await this.prisma.actor.count({ where: actorFilter });
@@ -60,25 +58,55 @@ export class QuestsService {
 
     const actor = await this.prisma.actor.findFirst({
       where: actorFilter,
-      skip: randomNumber,
+      skip: randomNumber
     });
 
     if (!actor) throw new Error('Falha ao sortear o ator.');
     return actor;
   }
 
-  public generateObjectives(
-    num: number,
-    questId: string,
-    heroClass: string,
-  ): ObjectiveDto[] {
+  private generateNarrative(actor: Actor): string[] {
+    const randFTitles = Math.floor(
+      Math.random() * friendlyTemplates.titles.length
+    );
+    const randFDescritions = Math.floor(
+      Math.random() * friendlyTemplates.descriptions.length
+    );
+    const randHTitles = Math.floor(
+      Math.random() * hostileTemplates.titles.length
+    );
+    const randHDescriptions = Math.floor(
+      Math.random() * hostileTemplates.descriptions.length
+    );
+
+    if (actor.hostility) {
+      const title = hostileTemplates.titles[randHTitles] + ' ' + roleTranslator[actor.role];
+
+      const description = roleTranslator[actor.role] + ' ' + actor.name + ' ' + hostileTemplates.descriptions[randHDescriptions];
+
+      if (!title && !description) throw new Error('Falha ao criar narrativa.');
+      return [title, description];
+    }
+    if (!actor.hostility) {
+      const title = friendlyTemplates.titles[randFTitles] + ' ' + roleTranslator[actor.role];
+
+      const description = roleTranslator[actor.role] + ' ' + actor.name + ' ' + friendlyTemplates.descriptions[randFDescritions];
+
+      if (!title && !description) throw new Error('Falha ao criar narrativa.');
+      return [title, description];
+    }
+
+    return ['erro ao encontrar ator'];
+  }
+
+  public generateObjectives(num: number, questId: string, heroClass: string): ObjectiveDto[] {
     const objectives: ObjectiveDto[] = [];
 
     const listActions = actionPool[heroClass] || [
       // ações padrão caso a classe inserida não seja nenhuma das actionPool
       ActionType.Gather,
       ActionType.Trade,
-      ActionType.Investigate,
+      ActionType.Investigate
     ];
 
     for (let i = 0; i < num; i++) {
@@ -92,7 +120,7 @@ export class QuestsService {
         quantity: generatedQuantity,
         targetId: crypto.randomUUID(),
         questId: questId,
-        description: `${actionTranslator[rawAction]} ${generatedQuantity} alvo(s)`,
+        description: `${actionTranslator[rawAction]} ${generatedQuantity} alvo(s)`
       };
       objectives.push(objective);
     }
@@ -104,8 +132,7 @@ export class QuestsService {
     const actor = await this.sortActor(hero.heroLevel, hero.heroReputation);
     const questId = crypto.randomUUID();
 
-    const title = `Missão do ${roleTranslator[actor.role]} perdido`;
-    const description = `O ${roleTranslator[actor.role]} ${actor.name} precisa de sua ajuda para encontrar a saída da floresta.`;
+    const [title, description] = this.generateNarrative(actor)
     const objectives = this.generateObjectives(2, questId, hero.heroClass);
 
     const gold = actor.level * 15;
@@ -122,11 +149,11 @@ export class QuestsService {
             id: obj.id,
             action: obj.action,
             quantity: obj.quantity,
-            targetId: obj.targetId,
+            targetId: obj.targetId
           })),
         },
         goldReward: gold,
-        xpReward: xp,
+        xpReward: xp
       },
     });
 
@@ -137,7 +164,7 @@ export class QuestsService {
       actorId: actor.id,
       objectives: objectives,
       goldReward: gold,
-      xpReward: xp,
+      xpReward: xp
     };
 
     return quest;
@@ -147,7 +174,7 @@ export class QuestsService {
     const rawQuests = await this.prisma.quest.findMany({
       include: {
         actor: true,
-        objectives: true,
+        objectives: true
       },
     });
 
@@ -162,10 +189,10 @@ export class QuestsService {
         quantity: obj.quantity,
         targetId: obj.targetId,
         questId: obj.questId,
-        description: `${actionTranslator[obj.action]} ${obj.quantity} alvo(s)`,
+        description: `${actionTranslator[obj.action]} ${obj.quantity} alvo(s)`
       })),
       goldReward: quest.goldReward,
-      xpReward: quest.xpReward,
+      xpReward: quest.xpReward
     }));
 
     return completeQuests;
