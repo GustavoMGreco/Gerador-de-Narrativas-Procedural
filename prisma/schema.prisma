@@ -21,6 +21,7 @@ enum ActorRole {
 }
 
 enum ActionType {
+  // Generics
   Kill
   Gather
   Escort
@@ -30,6 +31,40 @@ enum ActionType {
   Intimidate
   Trade
   Heal
+  Deliver
+  Survive
+  Destroy
+  Steal
+  Rescue
+  Protect
+  Spy
+  Flee
+  Recruit
+  Sabotage
+  // Warrior
+  Challenge
+  Siege
+  Guard
+  Execute
+  Rally
+  // Mage
+  Ritual
+  Banish
+  Decipher
+  Enchant
+  Contain
+  // Rogue
+  Infiltrate
+  Assassinate
+  Forge
+  Blackmail
+  Pickpocket
+  // Cleric
+  Purify
+  Consecrate
+  Exorcise
+  LastRites
+  Convert
 
   @@map("action_types")
 }
@@ -46,6 +81,28 @@ enum QuestStatus {
   Accepted
   Completed
   Failed
+}
+
+enum TargetCategory {
+  Monster
+  Person
+  Item
+  Location
+  // Targets específicos de classe
+  Mage
+  Warrior
+  Rogue
+  Cleric
+}
+
+model Target {
+  id         String         @id @default(uuid())
+  name       String
+  category   TargetCategory
+  level      Int
+  objectives Objective[]
+
+  @@map("targets")
 }
 
 model Hero {
@@ -76,6 +133,7 @@ model Objective {
   id       String     @id @default(uuid())
   action   ActionType
   quantity Int
+  target   Target     @relation(fields: [targetId], references: [id])
   targetId String     @map("target_id")
   quest    Quest      @relation(fields: [questId], references: [id])
   questId  String     @map("quest_id")

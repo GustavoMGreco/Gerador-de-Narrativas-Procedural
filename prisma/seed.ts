@@ -12,11 +12,17 @@ const adapter = new PrismaPg(pool as any);
 const prisma = new PrismaClient({ adapter });
 
 async function main() {
-    const texto = fs.readFileSync('./prisma/actors.json', 'utf-8');
-    const textoArray = JSON.parse(texto);
-    await prisma.actor.createMany({data: textoArray});
+    const textoActors = fs.readFileSync('./prisma/data/actors.json', 'utf-8');
+    const actorsArray = JSON.parse(textoActors);
+    await prisma.actor.createMany({ data: actorsArray });
 
-    console.log('Semeadura concluída com sucesso!');
+    console.log('Semeadura de actors concluída.');
+
+    const textoTargets = fs.readFileSync('./prisma/data/targets.json', 'utf-8');
+    const targetsArray = JSON.parse(textoTargets);
+    await prisma.target.createMany({ data: targetsArray })
+
+    console.log(`Foram criados ${targetsArray.length} alvos com sucesso.`);
 }
 
 main()

@@ -1,0 +1,502 @@
+[
+  {
+    "name": "Goblin Saqueador",
+    "category": "Monster",
+    "level": 1
+  },
+  {
+    "name": "Dragão de Obsidiana",
+    "category": "Monster",
+    "level": 50
+  },
+  {
+    "name": "Lobo das Trevas",
+    "category": "Monster",
+    "level": 4
+  },
+  {
+    "name": "Troll da Ponte Podre",
+    "category": "Monster",
+    "level": 14
+  },
+  {
+    "name": "Espectro do Cemitério",
+    "category": "Monster",
+    "level": 18
+  },
+  {
+    "name": "Hidra do Pântano Cinzento",
+    "category": "Monster",
+    "level": 32
+  },
+  {
+    "name": "Lich Soberano",
+    "category": "Monster",
+    "level": 47
+  },
+  {
+    "name": "Basilisco de Pedra",
+    "category": "Monster",
+    "level": 28
+  },
+  {
+    "name": "Quimera Corrompida",
+    "category": "Monster",
+    "level": 38
+  },
+  {
+    "name": "Enxame de Ratos Infestados",
+    "category": "Monster",
+    "level": 3
+  },
+  {
+    "name": "Vampiro Nobre",
+    "category": "Monster",
+    "level": 35
+  },
+  {
+    "name": "Golem de Cinzas",
+    "category": "Monster",
+    "level": 22
+  },
+  {
+    "name": "Wyvern Sombria",
+    "category": "Monster",
+    "level": 40
+  },
+  {
+    "name": "Banshee da Torre Esquecida",
+    "category": "Monster",
+    "level": 24
+  },
+  {
+    "name": "Manticora Faminta",
+    "category": "Monster",
+    "level": 30
+  },
+  {
+    "name": "Kobold Xamã",
+    "category": "Monster",
+    "level": 7
+  },
+  {
+    "name": "Erva de Sangue Rara",
+    "category": "Item",
+    "level": 1
+  },
+  {
+    "name": "Cálice do Rei Louco",
+    "category": "Item",
+    "level": 25
+  },
+  {
+    "name": "Espada da Maré Sangrenta",
+    "category": "Item",
+    "level": 30
+  },
+  {
+    "name": "Mapa do Covil Perdido",
+    "category": "Item",
+    "level": 5
+  },
+  {
+    "name": "Amuleto da Alma Presa",
+    "category": "Item",
+    "level": 20
+  },
+  {
+    "name": "Veneno de Sombra Concentrado",
+    "category": "Item",
+    "level": 15
+  },
+  {
+    "name": "Coração Petrificado de Wyvern",
+    "category": "Item",
+    "level": 38
+  },
+  {
+    "name": "Chave de Osso Maldita",
+    "category": "Item",
+    "level": 12
+  },
+  {
+    "name": "Cristal de Visão Dupla",
+    "category": "Item",
+    "level": 22
+  },
+  {
+    "name": "Moeda do Pacto Infernal",
+    "category": "Item",
+    "level": 35
+  },
+  {
+    "name": "Príncipe Herdeiro",
+    "category": "Person",
+    "level": 15
+  },
+  {
+    "name": "Mendigo que Viu Tudo",
+    "category": "Person",
+    "level": 2
+  },
+  {
+    "name": "Capitã da Guarda Corrupta",
+    "category": "Person",
+    "level": 20
+  },
+  {
+    "name": "Viúva do Senhor Traído",
+    "category": "Person",
+    "level": 11
+  },
+  {
+    "name": "Espião da Corte Inimiga",
+    "category": "Person",
+    "level": 17
+  },
+  {
+    "name": "Criança com Memória Maldita",
+    "category": "Person",
+    "level": 6
+  },
+  {
+    "name": "General Desertor Exilado",
+    "category": "Person",
+    "level": 28
+  },
+  {
+    "name": "Sacerdotisa Apóstata",
+    "category": "Person",
+    "level": 22
+  },
+  {
+    "name": "Herdeiro Ilegítimo do Trono",
+    "category": "Person",
+    "level": 19
+  },
+  {
+    "name": "Comerciante com Dívida de Sangue",
+    "category": "Person",
+    "level": 13
+  },
+  {
+    "name": "Assassino Aposentado",
+    "category": "Person",
+    "level": 24
+  },
+  {
+    "name": "Acampamento dos Bandidos",
+    "category": "Location",
+    "level": 5
+  },
+  {
+    "name": "Ruínas do Templo Submerso",
+    "category": "Location",
+    "level": 25
+  },
+  {
+    "name": "Taverna do Último Respiro",
+    "category": "Location",
+    "level": 4
+  },
+  {
+    "name": "Mina Abandonada de Prata Negra",
+    "category": "Location",
+    "level": 18
+  },
+  {
+    "name": "Floresta dos Sussurros Eternos",
+    "category": "Location",
+    "level": 22
+  },
+  {
+    "name": "Torre do Arquimago Morto",
+    "category": "Location",
+    "level": 35
+  },
+  {
+    "name": "Catacumbas Reais Profanadas",
+    "category": "Location",
+    "level": 30
+  },
+  {
+    "name": "Vilarejo Fantasma de Edenmoor",
+    "category": "Location",
+    "level": 15
+  },
+  {
+    "name": "Fortaleza Sitiada de Ironhold",
+    "category": "Location",
+    "level": 28
+  },
+  {
+    "name": "Porto dos Contrabandistas",
+    "category": "Location",
+    "level": 10
+  },
+  {
+    "name": "Abismo da Queda Silenciosa",
+    "category": "Location",
+    "level": 42
+  },
+  {
+    "name": "Mercado Negro Subterrâneo",
+    "category": "Location",
+    "level": 16
+  },
+  {
+    "name": "Santuário Corrompido da Lua",
+    "category": "Location",
+    "level": 20
+  },
+  {
+    "name": "Grimório Proibido",
+    "category": "Mage",
+    "level": 10
+  },
+  {
+    "name": "Tomo das Profecias Invertidas",
+    "category": "Mage",
+    "level": 38
+  },
+  {
+    "name": "Laboratório de Transmutação Proibida",
+    "category": "Mage",
+    "level": 30
+  },
+  {
+    "name": "Aprendiz Corrompido pelo Vazio",
+    "category": "Mage",
+    "level": 14
+  },
+  {
+    "name": "Sigilo do Portal Instável",
+    "category": "Mage",
+    "level": 22
+  },
+  {
+    "name": "Familiar Demoníaco Ligado",
+    "category": "Mage",
+    "level": 18
+  },
+  {
+    "name": "Nexo de Energia Arcana Descontrolada",
+    "category": "Mage",
+    "level": 45
+  },
+  {
+    "name": "Artefato de Supressão Mágica",
+    "category": "Mage",
+    "level": 26
+  },
+  {
+    "name": "Mago Renegado da Torre Negra",
+    "category": "Mage",
+    "level": 34
+  },
+  {
+    "name": "Ritual de Invocação Incompleto",
+    "category": "Mage",
+    "level": 20
+  },
+  {
+    "name": "Cristal de Memória Arcana Selada",
+    "category": "Mage",
+    "level": 16
+  },
+  {
+    "name": "Líder Mercenário",
+    "category": "Warrior",
+    "level": 12
+  },
+  {
+    "name": "Arena de Sangue Clandestina",
+    "category": "Warrior",
+    "level": 20
+  },
+  {
+    "name": "Campeão Invicto da Guilda de Ferro",
+    "category": "Warrior",
+    "level": 40
+  },
+  {
+    "name": "Armadura Amaldiçoada do Conquistador",
+    "category": "Warrior",
+    "level": 35
+  },
+  {
+    "name": "Desertor com Segredos Militares",
+    "category": "Warrior",
+    "level": 16
+  },
+  {
+    "name": "Comandante da Legião das Sombras",
+    "category": "Warrior",
+    "level": 44
+  },
+  {
+    "name": "Relíquia de Guerra do Rei Caído",
+    "category": "Warrior",
+    "level": 28
+  },
+  {
+    "name": "Recruta Fanático da Ordem de Ferro",
+    "category": "Warrior",
+    "level": 8
+  },
+  {
+    "name": "Estratégia de Cerco Roubada",
+    "category": "Warrior",
+    "level": 22
+  },
+  {
+    "name": "Veterano Traumatizado com Informações",
+    "category": "Warrior",
+    "level": 18
+  },
+  {
+    "name": "Torneio Armadilha do Senhor da Guerra",
+    "category": "Warrior",
+    "level": 30
+  },
+  {
+    "name": "Cofre da Guilda",
+    "category": "Rogue",
+    "level": 8
+  },
+  {
+    "name": "Rede de Informantes da Cidade Baixa",
+    "category": "Rogue",
+    "level": 22
+  },
+  {
+    "name": "Falsificador Mestre de Selos Reais",
+    "category": "Rogue",
+    "level": 28
+  },
+  {
+    "name": "Esconderijo do Bando das Sombras",
+    "category": "Rogue",
+    "level": 15
+  },
+  {
+    "name": "Lista de Contratos de Assassinato",
+    "category": "Rogue",
+    "level": 32
+  },
+  {
+    "name": "Tesouro Escondido do Ladrão Lendário",
+    "category": "Rogue",
+    "level": 40
+  },
+  {
+    "name": "Veneno Raro de Origem Desconhecida",
+    "category": "Rogue",
+    "level": 18
+  },
+  {
+    "name": "Identidade do Mestre da Guilda das Sombras",
+    "category": "Rogue",
+    "level": 45
+  },
+  {
+    "name": "Passagem Secreta sob o Palácio",
+    "category": "Rogue",
+    "level": 12
+  },
+  {
+    "name": "Agente Duplo Infiltrado na Guarda",
+    "category": "Rogue",
+    "level": 24
+  },
+  {
+    "name": "Arquivo de Chantagem da Nobreza",
+    "category": "Rogue",
+    "level": 36
+  },
+  {
+    "name": "Altar Profanado",
+    "category": "Cleric",
+    "level": 10
+  },
+  {
+    "name": "Ossuário Profanado por Cultistas",
+    "category": "Cleric",
+    "level": 18
+  },
+  {
+    "name": "Relíquia Sagrada Roubada",
+    "category": "Cleric",
+    "level": 24
+  },
+  {
+    "name": "Sacerdote Possuído pelo Demônio",
+    "category": "Cleric",
+    "level": 28
+  },
+  {
+    "name": "Grimório de Necromancia Herética",
+    "category": "Cleric",
+    "level": 32
+  },
+  {
+    "name": "Sino Maldito que Ressuscita Mortos",
+    "category": "Cleric",
+    "level": 38
+  },
+  {
+    "name": "Cultista Líder do Credo do Fim",
+    "category": "Cleric",
+    "level": 42
+  },
+  {
+    "name": "Fonte Sagrada Envenenada",
+    "category": "Cleric",
+    "level": 14
+  },
+  {
+    "name": "Criança Marcada por Profecia Sombria",
+    "category": "Cleric",
+    "level": 10
+  },
+  {
+    "name": "Portal para o Reino dos Mortos Aberto",
+    "category": "Cleric",
+    "level": 48
+  },
+  {
+    "name": "Confessor com Segredo que Abala a Fé",
+    "category": "Cleric",
+    "level": 20
+  },
+  {
+    "name": "Gnoll Caçador de Crânios",
+    "category": "Monster",
+    "level": 11
+  },
+  {
+    "name": "Elemental de Lama Corrompida",
+    "category": "Monster",
+    "level": 20
+  },
+  {
+    "name": "Caranguejo Gigante das Ruínas",
+    "category": "Monster",
+    "level": 6
+  },
+  {
+    "name": "Sombra Vinculada ao Espelho",
+    "category": "Monster",
+    "level": 27
+  },
+  {
+    "name": "Haste do Estandarte Caído",
+    "category": "Item",
+    "level": 9
+  },
+  {
+    "name": "Máscara do Inquisidor Morto",
+    "category": "Item",
+    "level": 33
+  }
+]

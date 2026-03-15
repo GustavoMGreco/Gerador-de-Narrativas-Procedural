@@ -17,6 +17,7 @@ const roleTranslator: Record<ActorRole, string> = {
 };
 
 const actionTranslator: Record<ActionType, string> = {
+  // Genéricos
   Kill: 'Matar',
   Gather: 'Coletar',
   Escort: 'Escoltar',
@@ -25,7 +26,41 @@ const actionTranslator: Record<ActionType, string> = {
   Negotiate: 'Negociar',
   Intimidate: 'Intimidar',
   Trade: 'Trocar',
-  Heal: 'Curar'
+  Heal: 'Curar',
+  Deliver: 'Entregar',
+  Survive: 'Sobreviver',
+  Destroy: 'Destruir',
+  Steal: 'Roubar',
+  Rescue: 'Resgatar',
+  Protect: 'Proteger',
+  Spy: 'Espionar',
+  Flee: 'Fugir',
+  Recruit: 'Recrutar',
+  Sabotage: 'Sabotar',
+  // Warrior
+  Challenge: 'Desafiar',
+  Siege: 'Sitiar',
+  Guard: 'Guardar',
+  Execute: 'Executar',
+  Rally: 'Reagrupar',
+  // Mage
+  Ritual: 'Ritualizar',
+  Banish: 'Banir',
+  Decipher: 'Decifrar',
+  Enchant: 'Encantar',
+  Contain: 'Conter',
+  // Rogue
+  Infiltrate: 'Infiltrar',
+  Assassinate: 'Assassinar',
+  Forge: 'Falsificar',
+  Blackmail: 'Chantagear',
+  Pickpocket: 'Bater Carteira',
+  // Cleric
+  Purify: 'Purificar',
+  Consecrate: 'Consagrar',
+  Exorcise: 'Exorcizar',
+  LastRites: 'Últimos Ritos',
+  Convert: 'Converter',
 };
 
 const actionPool: Record<string, ActionType[]> = {
