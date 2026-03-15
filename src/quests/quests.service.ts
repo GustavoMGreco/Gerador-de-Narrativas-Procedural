@@ -210,12 +210,29 @@ export class QuestsService {
   };
 
   async acceptQuest(id: string) {
-    const quest = await this.prisma.quest.findUnique({ where: { id } });
+    const quest = await this.prisma.quest.findUnique({
+      where: { id },
+      include: { hero: true }
+    });
 
     if (!quest) throw new NotFoundException('Quest não encontrada.');
+
     if (quest.status !== QuestStatus.Available) {
       throw new BadRequestException('Esta quest não pode mais ser aceita.');
     }
+
+    const limite = 1 + Math.floor(quest.hero.level / 5);
+
+    const numAcceptedQuests = await this.prisma.quest.count({
+      where: {
+        heroId: quest.heroId,
+        status: 'Accepted'
+      }
+    });
+
+    if (numAcceptedQuests >= limite) {
+      throw new BadRequestException('O herói já atingiu o limite de missões ativas.');
+    };
 
     return this.prisma.quest.update({
       where: { id },
@@ -267,8 +284,8 @@ export class QuestsService {
         where: { id },
         data: {
           status: QuestStatus.Available,
-          goldReward: { increment: -(quest.goldReward * 0.3) },
-          xpReward: { increment: -(quest.xpReward * 0.3) }
+          goldReward: { increment: Math.floor(-(quest.goldReward * 0.3)) },
+          xpReward: { increment: Math.floor(-(quest.xpReward * 0.3)) }
         }
       })
     })
