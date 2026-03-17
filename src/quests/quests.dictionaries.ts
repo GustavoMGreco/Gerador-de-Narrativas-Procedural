@@ -78,6 +78,7 @@ export const actionPool: Record<string, ActionType[]> = {
   Cleric:  [...genericActions.Cleric,  ...specificActions.Cleric],
 };
 
+// determina uma segunda ação que faça sentido com a primeira
 export const objectiveChains: Partial<Record<ActionType, ActionType[]>> = {
   // Genéricos
   [ActionType.Investigate]: [ActionType.Assassinate, ActionType.Steal, ActionType.Blackmail],
@@ -125,6 +126,7 @@ export const objectiveChains: Partial<Record<ActionType, ActionType[]>> = {
   [ActionType.Convert]:     [ActionType.Recruit, ActionType.Negotiate, ActionType.Blackmail],
 };
 
+// determina as categorias de alvo com que uma ação pode se relacionar
 export const actionToTargetCategory: Partial<Record<ActionType, TargetCategory[]>> = {
   // Genéricos
   [ActionType.Kill]:        [TargetCategory.Monster, TargetCategory.Person],
@@ -210,7 +212,8 @@ export const narrativeOverrides: Partial<Record<ActionType, Partial<Record<Targe
   },
   [ActionType.Exorcise]: {
     [TargetCategory.Person]:  'Libertar a alma de',
-    [TargetCategory.Monster]: 'Expulsar o espírito de',
+    [TargetCategory.Monster]: 'Exorcizar', // plural compatível: "Exorcizar 3x Espectro"
+    [TargetCategory.Cleric]:  'Purgar',
   },
   [ActionType.Recruit]: {
     [TargetCategory.Person]:  'Convencer',
@@ -218,6 +221,7 @@ export const narrativeOverrides: Partial<Record<ActionType, Partial<Record<Targe
   },
 };
 
+// Ações incontáveis por natureza independente do alvo (processos, estados)
 export const uncountableActions = new Set<ActionType>([
   ActionType.Survive,
   ActionType.Flee,
@@ -227,11 +231,15 @@ export const uncountableActions = new Set<ActionType>([
   ActionType.Ritual,
   ActionType.Consecrate,
   ActionType.Purify,
-  ActionType.Exorcise,
-  ActionType.Banish,
-  ActionType.Contain,
   ActionType.Decipher,
   ActionType.LastRites,
+]);
+
+// Ações incontáveis SOMENTE quando o alvo não é Monster ou Item
+export const uncountableVsNonMonster = new Set<ActionType>([
+  ActionType.Banish, 
+  ActionType.Exorcise,
+  ActionType.Contain,
 ]);
 
 export const uncountableCategories = new Set<TargetCategory>([

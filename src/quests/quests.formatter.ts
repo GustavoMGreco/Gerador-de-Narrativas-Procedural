@@ -10,6 +10,7 @@ import {
   roleTranslator,
   uncountableActions,
   uncountableCategories,
+  uncountableVsNonMonster,
 } from './quests.dictionaries';
 
 @Injectable()
@@ -45,9 +46,14 @@ export class QuestsFormatter {
       return `${verb} ${prep} ${target.name}`;
     }
 
+    const isCountableTarget =
+      target.category === TargetCategory.Monster ||
+      target.category === TargetCategory.Item;
+
     const isUncountable =
       uncountableActions.has(action) ||
-      uncountableCategories.has(target.category);
+      uncountableCategories.has(target.category) ||
+      (uncountableVsNonMonster.has(action) && !isCountableTarget);
 
     if (isUncountable || quantity === 1) {
       const article = categoryArticle[target.category];
