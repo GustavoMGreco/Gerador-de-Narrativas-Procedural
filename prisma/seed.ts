@@ -12,6 +12,12 @@ const adapter = new PrismaPg(pool as any);
 const prisma = new PrismaClient({ adapter });
 
 async function main() {
+    const textoRegions = fs.readFileSync('./prisma/data/regions.json', 'utf-8');
+    const regionsArray = JSON.parse(textoRegions);
+    await prisma.region.createMany({ data: regionsArray });
+
+    console.log('Semeadura de regions concluída.');
+
     const textoActors = fs.readFileSync('./prisma/data/actors.json', 'utf-8');
     const actorsArray = JSON.parse(textoActors);
     await prisma.actor.createMany({ data: actorsArray });

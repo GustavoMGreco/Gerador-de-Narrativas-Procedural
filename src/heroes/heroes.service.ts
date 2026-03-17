@@ -10,7 +10,8 @@ export class HeroesService {
     return this.prisma.hero.create({
       data: {
         name: createHeroDto.name,
-        class: createHeroDto.class
+        class: createHeroDto.class,
+        regionId: createHeroDto.regionId
       },
     });
   }

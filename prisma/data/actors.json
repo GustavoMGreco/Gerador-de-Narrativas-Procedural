@@ -3,600 +3,1505 @@
     "name": "Aldric Dunnmore",
     "role": "Mayor",
     "level": 12,
-    "hostility": false
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
   },
   {
     "name": "Seraphine Coldwell",
     "role": "Mayor",
     "level": 9,
-    "hostility": false
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
   },
   {
     "name": "Bryndas Holt",
     "role": "Mayor",
     "level": 15,
-    "hostility": false
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
   },
   {
     "name": "Mervyn Ashcroft",
     "role": "Mayor",
     "level": 11,
-    "hostility": true
+    "hostility": true,
+    "regionId": "22222222-2222-2222-2222-222222222222"
   },
   {
     "name": "Isolde Wraithborne",
     "role": "Mayor",
     "level": 8,
-    "hostility": false
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
   },
   {
     "name": "Torben Greymantle",
     "role": "Blacksmith",
     "level": 22,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Dalla Ironwhisper",
     "role": "Blacksmith",
     "level": 31,
-    "hostility": false
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Oswin Emberforge",
     "role": "Blacksmith",
     "level": 18,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Gareth Soothand",
     "role": "Blacksmith",
     "level": 27,
-    "hostility": true
+    "hostility": true,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Hilda Cindermaul",
     "role": "Blacksmith",
     "level": 35,
-    "hostility": false
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Ulfric Brandanvil",
     "role": "Blacksmith",
     "level": 40,
-    "hostility": false
+    "hostility": false,
+    "regionId": "55555555-5555-5555-5555-555555555555"
   },
   {
     "name": "Nessa Thornforge",
     "role": "Blacksmith",
     "level": 14,
-    "hostility": false
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
   },
   {
     "name": "Calder Grimweld",
     "role": "Guard",
     "level": 16,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Rowena Duskshield",
     "role": "Guard",
     "level": 20,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Bran Hollowmark",
     "role": "Guard",
     "level": 13,
-    "hostility": true
+    "hostility": true,
+    "regionId": "22222222-2222-2222-2222-222222222222"
   },
   {
     "name": "Sigrid Vanthorpe",
     "role": "Guard",
     "level": 19,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Edwyn Pallwall",
     "role": "Guard",
     "level": 24,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Marta Coldspear",
     "role": "Guard",
     "level": 17,
-    "hostility": true
+    "hostility": true,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Aldous Greyveil",
     "role": "Guard",
     "level": 21,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Petra Nightwatch",
     "role": "Guard",
     "level": 15,
-    "hostility": false
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
   },
   {
     "name": "Cormac Dunwall",
     "role": "Guard",
     "level": 28,
-    "hostility": false
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Theda Irongate",
     "role": "Guard",
     "level": 22,
-    "hostility": true
+    "hostility": true,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Leofric Ashbourne",
     "role": "Guard",
     "level": 18,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Wulfhild Stonebrace",
     "role": "Guard",
     "level": 25,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Cynric Dreadmoor",
     "role": "Alchemist",
     "level": 33,
-    "hostility": false
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Vesper Nightshade",
     "role": "Alchemist",
     "level": 41,
-    "hostility": true
+    "hostility": true,
+    "regionId": "55555555-5555-5555-5555-555555555555"
   },
   {
     "name": "Aldwyn Murkveil",
     "role": "Alchemist",
     "level": 29,
-    "hostility": false
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Sibyl Rotherwick",
     "role": "Alchemist",
     "level": 37,
-    "hostility": false
+    "hostility": false,
+    "regionId": "55555555-5555-5555-5555-555555555555"
   },
   {
     "name": "Erasmus Gallowmere",
     "role": "Alchemist",
     "level": 45,
-    "hostility": true
+    "hostility": true,
+    "regionId": "55555555-5555-5555-5555-555555555555"
   },
   {
     "name": "Isolde Brinewick",
     "role": "Alchemist",
     "level": 22,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Morwenna Ashveil",
     "role": "Alchemist",
     "level": 38,
-    "hostility": false
+    "hostility": false,
+    "regionId": "55555555-5555-5555-5555-555555555555"
   },
   {
     "name": "Drest Coldvial",
     "role": "Alchemist",
     "level": 31,
-    "hostility": true
+    "hostility": true,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Fenwick Grimtallow",
     "role": "Innkeeper",
     "level": 7,
-    "hostility": false
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
   },
   {
     "name": "Berta Muddlemug",
     "role": "Innkeeper",
     "level": 5,
-    "hostility": false
+    "hostility": false,
+    "regionId": "11111111-1111-1111-1111-111111111111"
   },
   {
     "name": "Sven Barrelkeep",
     "role": "Innkeeper",
     "level": 9,
-    "hostility": false
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
   },
   {
     "name": "Osra Hollowhearthh",
     "role": "Innkeeper",
     "level": 6,
-    "hostility": true
+    "hostility": true,
+    "regionId": "22222222-2222-2222-2222-222222222222"
   },
   {
     "name": "Dafydd Pallcandle",
     "role": "Innkeeper",
     "level": 11,
-    "hostility": false
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
   },
   {
     "name": "Millie Greyroost",
     "role": "Innkeeper",
     "level": 4,
-    "hostility": false
+    "hostility": false,
+    "regionId": "11111111-1111-1111-1111-111111111111"
   },
   {
     "name": "Hadwin Tarnkeep",
     "role": "Innkeeper",
     "level": 8,
-    "hostility": true
+    "hostility": true,
+    "regionId": "22222222-2222-2222-2222-222222222222"
   },
   {
     "name": "Elsa Coldcroft",
     "role": "Innkeeper",
     "level": 10,
-    "hostility": false
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
   },
   {
     "name": "Corvin Dustmantle",
     "role": "Merchant",
     "level": 14,
-    "hostility": false
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
   },
   {
     "name": "Alys Silverthread",
     "role": "Merchant",
     "level": 19,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Brennan Shiftcloak",
     "role": "Merchant",
     "level": 23,
-    "hostility": true
+    "hostility": true,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Ysabel Goldmere",
     "role": "Merchant",
     "level": 17,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Torold Duskbarter",
     "role": "Merchant",
     "level": 28,
-    "hostility": false
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Mildred Ashenscale",
     "role": "Merchant",
     "level": 12,
-    "hostility": false
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
   },
   {
     "name": "Pell Grimcoin",
     "role": "Merchant",
     "level": 31,
-    "hostility": true
+    "hostility": true,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Avice Hollowpurse",
     "role": "Merchant",
     "level": 20,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Dunstan Saltroad",
     "role": "Merchant",
     "level": 16,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Rowena Cairnmarket",
     "role": "Merchant",
     "level": 25,
-    "hostility": true
+    "hostility": true,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Aldric Tarnwheel",
     "role": "Merchant",
     "level": 22,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Sable Dreadwares",
     "role": "Merchant",
     "level": 35,
-    "hostility": true
+    "hostility": true,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Jorin Ashblade",
     "role": "Adventurer",
     "level": 28,
-    "hostility": false
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Kessa Voidwalker",
     "role": "Adventurer",
     "level": 44,
-    "hostility": true
+    "hostility": true,
+    "regionId": "55555555-5555-5555-5555-555555555555"
   },
   {
     "name": "Brand Duskmantle",
     "role": "Adventurer",
     "level": 19,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Lyra Coldveil",
     "role": "Adventurer",
     "level": 37,
-    "hostility": true
+    "hostility": true,
+    "regionId": "55555555-5555-5555-5555-555555555555"
   },
   {
     "name": "Hadric Grimthorn",
     "role": "Adventurer",
     "level": 33,
-    "hostility": false
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Isolde Shadowmarch",
     "role": "Adventurer",
     "level": 48,
-    "hostility": true
+    "hostility": true,
+    "regionId": "66666666-6666-6666-6666-666666666666"
   },
   {
     "name": "Wulfgar Ashenpath",
     "role": "Adventurer",
     "level": 22,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Niamh Dreadfall",
     "role": "Adventurer",
     "level": 41,
-    "hostility": true
+    "hostility": true,
+    "regionId": "55555555-5555-5555-5555-555555555555"
   },
   {
     "name": "Corwyn Pallblade",
     "role": "Adventurer",
     "level": 15,
-    "hostility": false
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
   },
   {
     "name": "Edda Nightroam",
     "role": "Adventurer",
     "level": 50,
-    "hostility": true
+    "hostility": true,
+    "regionId": "66666666-6666-6666-6666-666666666666"
   },
   {
     "name": "Sven Hollowstrike",
     "role": "Adventurer",
     "level": 30,
-    "hostility": false
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Mira Coldedge",
     "role": "Adventurer",
     "level": 26,
-    "hostility": false
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Thorn Wraith-Seeker",
     "role": "Adventurer",
     "level": 45,
-    "hostility": true
+    "hostility": true,
+    "regionId": "55555555-5555-5555-5555-555555555555"
   },
   {
     "name": "Bera Duskblade",
     "role": "Adventurer",
     "level": 17,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Aldric Grimstrike",
     "role": "Adventurer",
     "level": 39,
-    "hostility": true
+    "hostility": true,
+    "regionId": "55555555-5555-5555-5555-555555555555"
   },
   {
     "name": "Fenris Ashwalker",
     "role": "Adventurer",
     "level": 23,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Catryn Pallshroud",
     "role": "Adventurer",
     "level": 34,
-    "hostility": false
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Osric Dreadbourne",
     "role": "Adventurer",
     "level": 47,
-    "hostility": true
+    "hostility": true,
+    "regionId": "66666666-6666-6666-6666-666666666666"
   },
   {
     "name": "Elara Coldveil",
     "role": "Adventurer",
     "level": 12,
-    "hostility": false
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
   },
   {
     "name": "Brennan Murkshadow",
     "role": "Adventurer",
     "level": 42,
-    "hostility": true
+    "hostility": true,
+    "regionId": "55555555-5555-5555-5555-555555555555"
   },
   {
     "name": "Sigurd Ashmantle",
     "role": "Adventurer",
     "level": 29,
-    "hostility": false
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Hedda Grimfall",
     "role": "Adventurer",
     "level": 36,
-    "hostility": true
+    "hostility": true,
+    "regionId": "55555555-5555-5555-5555-555555555555"
   },
   {
     "name": "Lothar Duskpath",
     "role": "Adventurer",
     "level": 21,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Vesper Coldthorn",
     "role": "Adventurer",
     "level": 43,
-    "hostility": true
+    "hostility": true,
+    "regionId": "55555555-5555-5555-5555-555555555555"
   },
   {
     "name": "Alwyn Pallmarch",
     "role": "Adventurer",
     "level": 18,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Dregan Voidstep",
     "role": "Adventurer",
     "level": 49,
-    "hostility": true
+    "hostility": true,
+    "regionId": "66666666-6666-6666-6666-666666666666"
   },
   {
     "name": "Sable Ashgrim",
     "role": "Adventurer",
     "level": 31,
-    "hostility": false
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Ragnar Dreadmantle",
     "role": "Adventurer",
     "level": 38,
-    "hostility": true
+    "hostility": true,
+    "regionId": "55555555-5555-5555-5555-555555555555"
   },
   {
     "name": "Ingrid Hollowveil",
     "role": "Adventurer",
     "level": 24,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Cedric Nightedge",
     "role": "Adventurer",
     "level": 46,
-    "hostility": true
+    "hostility": true,
+    "regionId": "66666666-6666-6666-6666-666666666666"
   },
   {
     "name": "Morrigan Ashfall",
     "role": "Adventurer",
     "level": 27,
-    "hostility": false
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Halvard Grimroam",
     "role": "Adventurer",
     "level": 40,
-    "hostility": true
+    "hostility": true,
+    "regionId": "55555555-5555-5555-5555-555555555555"
   },
   {
     "name": "Tilda Duskwhisper",
     "role": "Adventurer",
     "level": 16,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Cael Pallstrike",
     "role": "Adventurer",
     "level": 35,
-    "hostility": true
+    "hostility": true,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Neria Coldstep",
     "role": "Adventurer",
     "level": 20,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Ulfric Shadowbane",
     "role": "Adventurer",
     "level": 44,
-    "hostility": true
+    "hostility": true,
+    "regionId": "55555555-5555-5555-5555-555555555555"
   },
   {
     "name": "Briseis Ashveil",
     "role": "Adventurer",
     "level": 25,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Torald Grimedge",
     "role": "Adventurer",
     "level": 32,
-    "hostility": true
+    "hostility": true,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Gwynna Duskmantle",
     "role": "Adventurer",
     "level": 14,
-    "hostility": false
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
   },
   {
     "name": "Reinar Coldwrath",
     "role": "Adventurer",
     "level": 48,
-    "hostility": true
+    "hostility": true,
+    "regionId": "66666666-6666-6666-6666-666666666666"
   },
   {
     "name": "Sif Hollowpath",
     "role": "Adventurer",
     "level": 22,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Aldred Grimveil",
     "role": "Adventurer",
     "level": 37,
-    "hostility": true
+    "hostility": true,
+    "regionId": "55555555-5555-5555-5555-555555555555"
   },
   {
     "name": "Elspeth Ashgrave",
     "role": "Adventurer",
     "level": 19,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
   },
   {
     "name": "Draven Duskfall",
     "role": "Adventurer",
     "level": 50,
-    "hostility": true
+    "hostility": true,
+    "regionId": "66666666-6666-6666-6666-666666666666"
   },
   {
     "name": "Brynja Pallwhisper",
     "role": "Adventurer",
     "level": 28,
-    "hostility": false
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Keldric Nightwarden",
     "role": "Guard",
     "level": 30,
-    "hostility": false
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Aelindra Murkveil",
     "role": "Alchemist",
     "level": 26,
-    "hostility": false
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
   },
   {
     "name": "Svara Grimtallow",
     "role": "Blacksmith",
     "level": 24,
-    "hostility": false
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
+  },
+  {
+    "name": "Croak Mudfist",
+    "role": "Guard",
+    "level": 1,
+    "hostility": true,
+    "regionId": "11111111-1111-1111-1111-111111111111"
+  },
+  {
+    "name": "Wart Grimeye",
+    "role": "Innkeeper",
+    "level": 2,
+    "hostility": true,
+    "regionId": "11111111-1111-1111-1111-111111111111"
+  },
+  {
+    "name": "Skeld Rothand",
+    "role": "Guard",
+    "level": 2,
+    "hostility": true,
+    "regionId": "11111111-1111-1111-1111-111111111111"
+  },
+  {
+    "name": "Morg Ashbile",
+    "role": "Merchant",
+    "level": 3,
+    "hostility": true,
+    "regionId": "11111111-1111-1111-1111-111111111111"
+  },
+  {
+    "name": "Tilda Sourwick",
+    "role": "Innkeeper",
+    "level": 3,
+    "hostility": true,
+    "regionId": "11111111-1111-1111-1111-111111111111"
+  },
+  {
+    "name": "Drav Hollowfang",
+    "role": "Guard",
+    "level": 4,
+    "hostility": true,
+    "regionId": "11111111-1111-1111-1111-111111111111"
+  },
+  {
+    "name": "Runa Coldgall",
+    "role": "Merchant",
+    "level": 4,
+    "hostility": true,
+    "regionId": "11111111-1111-1111-1111-111111111111"
+  },
+  {
+    "name": "Skarn Pitwall",
+    "role": "Guard",
+    "level": 5,
+    "hostility": true,
+    "regionId": "11111111-1111-1111-1111-111111111111"
+  },
+  {
+    "name": "Vex Grimthorn",
+    "role": "Adventurer",
+    "level": 5,
+    "hostility": true,
+    "regionId": "11111111-1111-1111-1111-111111111111"
+  },
+  {
+    "name": "Moira Blackmud",
+    "role": "Merchant",
+    "level": 6,
+    "hostility": true,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Grull Ashbile",
+    "role": "Guard",
+    "level": 7,
+    "hostility": true,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Dreva Coldthorn",
+    "role": "Guard",
+    "level": 8,
+    "hostility": true,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Gorka Grimwick",
+    "role": "Adventurer",
+    "level": 9,
+    "hostility": true,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Skrev Duskgrim",
+    "role": "Guard",
+    "level": 9,
+    "hostility": true,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Vorn Coldgall",
+    "role": "Adventurer",
+    "level": 10,
+    "hostility": true,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Breka Coldgrim",
+    "role": "Guard",
+    "level": 10,
+    "hostility": true,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Ragna Duskfang",
+    "role": "Merchant",
+    "level": 11,
+    "hostility": true,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Skorn Murkwall",
+    "role": "Guard",
+    "level": 12,
+    "hostility": true,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Drevka Coldpike",
+    "role": "Alchemist",
+    "level": 12,
+    "hostility": true,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Morgh Grimbile",
+    "role": "Guard",
+    "level": 14,
+    "hostility": true,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Skara Pitwall",
+    "role": "Merchant",
+    "level": 14,
+    "hostility": true,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Drak Hollowfang",
+    "role": "Guard",
+    "level": 15,
+    "hostility": true,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Vreth Ashmantle",
+    "role": "Adventurer",
+    "level": 15,
+    "hostility": true,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Reth Grimthorn",
+    "role": "Adventurer",
+    "level": 16,
+    "hostility": true,
+    "regionId": "33333333-3333-3333-3333-333333333333"
+  },
+  {
+    "name": "Skeld Murkwall",
+    "role": "Guard",
+    "level": 16,
+    "hostility": true,
+    "regionId": "33333333-3333-3333-3333-333333333333"
+  },
+  {
+    "name": "Morva Blackmud",
+    "role": "Alchemist",
+    "level": 18,
+    "hostility": true,
+    "regionId": "33333333-3333-3333-3333-333333333333"
+  },
+  {
+    "name": "Thrak Sourwick",
+    "role": "Guard",
+    "level": 19,
+    "hostility": true,
+    "regionId": "33333333-3333-3333-3333-333333333333"
+  },
+  {
+    "name": "Krev Ashdust",
+    "role": "Merchant",
+    "level": 20,
+    "hostility": true,
+    "regionId": "33333333-3333-3333-3333-333333333333"
+  },
+  {
+    "name": "Braga Ironbile",
+    "role": "Blacksmith",
+    "level": 20,
+    "hostility": true,
+    "regionId": "33333333-3333-3333-3333-333333333333"
+  },
+  {
+    "name": "Wulda Grimveil",
+    "role": "Adventurer",
+    "level": 21,
+    "hostility": true,
+    "regionId": "33333333-3333-3333-3333-333333333333"
+  },
+  {
+    "name": "Skarl Coldgrim",
+    "role": "Guard",
+    "level": 22,
+    "hostility": true,
+    "regionId": "33333333-3333-3333-3333-333333333333"
+  },
+  {
+    "name": "Skarn Hollowclaw",
+    "role": "Merchant",
+    "level": 23,
+    "hostility": true,
+    "regionId": "33333333-3333-3333-3333-333333333333"
+  },
+  {
+    "name": "Torva Ashclaw",
+    "role": "Adventurer",
+    "level": 24,
+    "hostility": true,
+    "regionId": "33333333-3333-3333-3333-333333333333"
+  },
+  {
+    "name": "Morgh Duskwall",
+    "role": "Guard",
+    "level": 24,
+    "hostility": true,
+    "regionId": "33333333-3333-3333-3333-333333333333"
+  },
+  {
+    "name": "Drava Ironbile",
+    "role": "Alchemist",
+    "level": 25,
+    "hostility": true,
+    "regionId": "33333333-3333-3333-3333-333333333333"
+  },
+  {
+    "name": "Vreka Ashdust",
+    "role": "Adventurer",
+    "level": 26,
+    "hostility": true,
+    "regionId": "44444444-4444-4444-4444-444444444444"
+  },
+  {
+    "name": "Skorv Grimwall",
+    "role": "Guard",
+    "level": 28,
+    "hostility": true,
+    "regionId": "44444444-4444-4444-4444-444444444444"
+  },
+  {
+    "name": "Trevka Coldclaw",
+    "role": "Alchemist",
+    "level": 29,
+    "hostility": true,
+    "regionId": "44444444-4444-4444-4444-444444444444"
+  },
+  {
+    "name": "Valdrak Ashmantle",
+    "role": "Guard",
+    "level": 30,
+    "hostility": true,
+    "regionId": "44444444-4444-4444-4444-444444444444"
+  },
+  {
+    "name": "Breka Ironpike",
+    "role": "Blacksmith",
+    "level": 33,
+    "hostility": true,
+    "regionId": "44444444-4444-4444-4444-444444444444"
+  },
+  {
+    "name": "Morvek Coldclaw",
+    "role": "Alchemist",
+    "level": 34,
+    "hostility": true,
+    "regionId": "44444444-4444-4444-4444-444444444444"
+  },
+  {
+    "name": "Skorn Duskbile",
+    "role": "Adventurer",
+    "level": 34,
+    "hostility": true,
+    "regionId": "44444444-4444-4444-4444-444444444444"
+  },
+  {
+    "name": "Thrag Grimwall",
+    "role": "Guard",
+    "level": 36,
+    "hostility": true,
+    "regionId": "55555555-5555-5555-5555-555555555555"
+  },
+  {
+    "name": "Kreva Ashveil",
+    "role": "Merchant",
+    "level": 38,
+    "hostility": true,
+    "regionId": "55555555-5555-5555-5555-555555555555"
+  },
+  {
+    "name": "Drovak Duskmantle",
+    "role": "Adventurer",
+    "level": 40,
+    "hostility": true,
+    "regionId": "55555555-5555-5555-5555-555555555555"
+  },
+  {
+    "name": "Vrek Ashclaw",
+    "role": "Merchant",
+    "level": 42,
+    "hostility": true,
+    "regionId": "55555555-5555-5555-5555-555555555555"
+  },
+  {
+    "name": "Skeld Ironbile",
+    "role": "Guard",
+    "level": 43,
+    "hostility": true,
+    "regionId": "55555555-5555-5555-5555-555555555555"
+  },
+  {
+    "name": "Morgath Grimveil",
+    "role": "Adventurer",
+    "level": 44,
+    "hostility": true,
+    "regionId": "55555555-5555-5555-5555-555555555555"
+  },
+  {
+    "name": "Vreka Coldgrim",
+    "role": "Alchemist",
+    "level": 46,
+    "hostility": true,
+    "regionId": "66666666-6666-6666-6666-666666666666"
+  },
+  {
+    "name": "Skorva Duskwall",
+    "role": "Guard",
+    "level": 47,
+    "hostility": true,
+    "regionId": "66666666-6666-6666-6666-666666666666"
+  },
+  {
+    "name": "Dravek Ashmantle",
+    "role": "Adventurer",
+    "level": 48,
+    "hostility": true,
+    "regionId": "66666666-6666-6666-6666-666666666666"
+  },
+  {
+    "name": "Morgath Ashclaw",
+    "role": "Adventurer",
+    "level": 49,
+    "hostility": true,
+    "regionId": "66666666-6666-6666-6666-666666666666"
+  },
+  {
+    "name": "Thrakk Voidmantle",
+    "role": "Adventurer",
+    "level": 50,
+    "hostility": true,
+    "regionId": "66666666-6666-6666-6666-666666666666"
+  },
+  {
+    "name": "Pip Ashwick",
+    "role": "Innkeeper",
+    "level": 1,
+    "hostility": false,
+    "regionId": "11111111-1111-1111-1111-111111111111"
+  },
+  {
+    "name": "Nelle Muddlebrook",
+    "role": "Merchant",
+    "level": 1,
+    "hostility": false,
+    "regionId": "11111111-1111-1111-1111-111111111111"
+  },
+  {
+    "name": "Osbert Greywick",
+    "role": "Guard",
+    "level": 2,
+    "hostility": false,
+    "regionId": "11111111-1111-1111-1111-111111111111"
+  },
+  {
+    "name": "Mabel Saltwick",
+    "role": "Innkeeper",
+    "level": 2,
+    "hostility": false,
+    "regionId": "11111111-1111-1111-1111-111111111111"
+  },
+  {
+    "name": "Cobb Greymantle",
+    "role": "Merchant",
+    "level": 3,
+    "hostility": false,
+    "regionId": "11111111-1111-1111-1111-111111111111"
+  },
+  {
+    "name": "Tibalt Coldwick",
+    "role": "Guard",
+    "level": 3,
+    "hostility": false,
+    "regionId": "11111111-1111-1111-1111-111111111111"
+  },
+  {
+    "name": "Edith Murkwell",
+    "role": "Innkeeper",
+    "level": 4,
+    "hostility": false,
+    "regionId": "11111111-1111-1111-1111-111111111111"
+  },
+  {
+    "name": "Hanna Coldwick",
+    "role": "Merchant",
+    "level": 4,
+    "hostility": false,
+    "regionId": "11111111-1111-1111-1111-111111111111"
+  },
+  {
+    "name": "Rodric Pallwick",
+    "role": "Guard",
+    "level": 5,
+    "hostility": false,
+    "regionId": "11111111-1111-1111-1111-111111111111"
+  },
+  {
+    "name": "Sera Ashbrook",
+    "role": "Innkeeper",
+    "level": 6,
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Wynn Duskwick",
+    "role": "Merchant",
+    "level": 7,
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Aldric Murkstone",
+    "role": "Guard",
+    "level": 8,
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Beva Coldcroft",
+    "role": "Innkeeper",
+    "level": 9,
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Caelan Ashgrove",
+    "role": "Merchant",
+    "level": 10,
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Selma Ironwick",
+    "role": "Innkeeper",
+    "level": 11,
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Bram Coldwick",
+    "role": "Guard",
+    "level": 13,
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Delia Ashveil",
+    "role": "Merchant",
+    "level": 14,
+    "hostility": false,
+    "regionId": "22222222-2222-2222-2222-222222222222"
+  },
+  {
+    "name": "Eward Greystone",
+    "role": "Blacksmith",
+    "level": 16,
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
+  },
+  {
+    "name": "Faye Coldmantle",
+    "role": "Alchemist",
+    "level": 17,
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
+  },
+  {
+    "name": "Gareth Pallstone",
+    "role": "Guard",
+    "level": 18,
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
+  },
+  {
+    "name": "Hessa Duskveil",
+    "role": "Innkeeper",
+    "level": 20,
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
+  },
+  {
+    "name": "Ivar Ashwall",
+    "role": "Blacksmith",
+    "level": 21,
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
+  },
+  {
+    "name": "Jora Grimveil",
+    "role": "Alchemist",
+    "level": 23,
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
+  },
+  {
+    "name": "Kelda Ironbrook",
+    "role": "Merchant",
+    "level": 24,
+    "hostility": false,
+    "regionId": "33333333-3333-3333-3333-333333333333"
+  },
+  {
+    "name": "Lucan Duskwall",
+    "role": "Guard",
+    "level": 26,
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
+  },
+  {
+    "name": "Morna Coldstone",
+    "role": "Blacksmith",
+    "level": 27,
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
+  },
+  {
+    "name": "Nolan Ashmantle",
+    "role": "Alchemist",
+    "level": 28,
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
+  },
+  {
+    "name": "Odda Greywick",
+    "role": "Innkeeper",
+    "level": 29,
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
+  },
+  {
+    "name": "Petra Ironveil",
+    "role": "Merchant",
+    "level": 30,
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
+  },
+  {
+    "name": "Quinn Duskbrook",
+    "role": "Guard",
+    "level": 31,
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
+  },
+  {
+    "name": "Rook Ashstone",
+    "role": "Blacksmith",
+    "level": 32,
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
+  },
+  {
+    "name": "Selby Coldwall",
+    "role": "Alchemist",
+    "level": 33,
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
+  },
+  {
+    "name": "Tova Greymantle",
+    "role": "Merchant",
+    "level": 34,
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
+  },
+  {
+    "name": "Aldwin Duskstone",
+    "role": "Blacksmith",
+    "level": 35,
+    "hostility": false,
+    "regionId": "44444444-4444-4444-4444-444444444444"
+  },
+  {
+    "name": "Bryn Coldveil",
+    "role": "Alchemist",
+    "level": 36,
+    "hostility": false,
+    "regionId": "55555555-5555-5555-5555-555555555555"
+  },
+  {
+    "name": "Carrow Pallwall",
+    "role": "Guard",
+    "level": 37,
+    "hostility": false,
+    "regionId": "55555555-5555-5555-5555-555555555555"
+  },
+  {
+    "name": "Dara Ironbrook",
+    "role": "Merchant",
+    "level": 38,
+    "hostility": false,
+    "regionId": "55555555-5555-5555-5555-555555555555"
+  },
+  {
+    "name": "Elwin Ashstone",
+    "role": "Blacksmith",
+    "level": 39,
+    "hostility": false,
+    "regionId": "55555555-5555-5555-5555-555555555555"
+  },
+  {
+    "name": "Fenn Grimmantle",
+    "role": "Alchemist",
+    "level": 40,
+    "hostility": false,
+    "regionId": "55555555-5555-5555-5555-555555555555"
+  },
+  {
+    "name": "Gwenda Duskwall",
+    "role": "Guard",
+    "level": 41,
+    "hostility": false,
+    "regionId": "55555555-5555-5555-5555-555555555555"
+  },
+  {
+    "name": "Hollis Coldstone",
+    "role": "Innkeeper",
+    "level": 42,
+    "hostility": false,
+    "regionId": "55555555-5555-5555-5555-555555555555"
+  },
+  {
+    "name": "Idris Ashveil",
+    "role": "Merchant",
+    "level": 42,
+    "hostility": false,
+    "regionId": "55555555-5555-5555-5555-555555555555"
+  },
+  {
+    "name": "Aldara Goldenveil",
+    "role": "Alchemist",
+    "level": 43,
+    "hostility": false,
+    "regionId": "55555555-5555-5555-5555-555555555555"
+  },
+  {
+    "name": "Meredith Coldspire",
+    "role": "Mayor",
+    "level": 43,
+    "hostility": false,
+    "regionId": "55555555-5555-5555-5555-555555555555"
+  },
+  {
+    "name": "Britta Coldmantle",
+    "role": "Innkeeper",
+    "level": 44,
+    "hostility": false,
+    "regionId": "55555555-5555-5555-5555-555555555555"
+  },
+  {
+    "name": "Nessa Grimbrook",
+    "role": "Alchemist",
+    "level": 44,
+    "hostility": false,
+    "regionId": "55555555-5555-5555-5555-555555555555"
+  },
+  {
+    "name": "Halvard Greyspire",
+    "role": "Guard",
+    "level": 45,
+    "hostility": false,
+    "regionId": "55555555-5555-5555-5555-555555555555"
+  },
+  {
+    "name": "Liriel Coldbrook",
+    "role": "Merchant",
+    "level": 45,
+    "hostility": false,
+    "regionId": "55555555-5555-5555-5555-555555555555"
+  },
+  {
+    "name": "Theron Ironmantle",
+    "role": "Blacksmith",
+    "level": 46,
+    "hostility": false,
+    "regionId": "66666666-6666-6666-6666-666666666666"
+  },
+  {
+    "name": "Caspian Nightgrove",
+    "role": "Merchant",
+    "level": 46,
+    "hostility": false,
+    "regionId": "66666666-6666-6666-6666-666666666666"
+  },
+  {
+    "name": "Torvald Ashwall",
+    "role": "Guard",
+    "level": 47,
+    "hostility": false,
+    "regionId": "66666666-6666-6666-6666-666666666666"
+  },
+  {
+    "name": "Aldric Ironveil",
+    "role": "Blacksmith",
+    "level": 47,
+    "hostility": false,
+    "regionId": "66666666-6666-6666-6666-666666666666"
+  },
+  {
+    "name": "Eirlys Ashcrown",
+    "role": "Alchemist",
+    "level": 48,
+    "hostility": false,
+    "regionId": "66666666-6666-6666-6666-666666666666"
+  },
+  {
+    "name": "Brennan Coldvault",
+    "role": "Mayor",
+    "level": 48,
+    "hostility": false,
+    "regionId": "66666666-6666-6666-6666-666666666666"
+  },
+  {
+    "name": "Sunniva Emberveil",
+    "role": "Alchemist",
+    "level": 49,
+    "hostility": false,
+    "regionId": "66666666-6666-6666-6666-666666666666"
+  },
+  {
+    "name": "Maevis Greyhollow",
+    "role": "Alchemist",
+    "level": 49,
+    "hostility": false,
+    "regionId": "66666666-6666-6666-6666-666666666666"
+  },
+  {
+    "name": "Roderick Pallmantle",
+    "role": "Blacksmith",
+    "level": 50,
+    "hostility": false,
+    "regionId": "66666666-6666-6666-6666-666666666666"
+  },
+  {
+    "name": "Wren Ashspire",
+    "role": "Alchemist",
+    "level": 50,
+    "hostility": false,
+    "regionId": "66666666-6666-6666-6666-666666666666"
+  },
+  {
+    "name": "Thorin Dawnwall",
+    "role": "Guard",
+    "level": 50,
+    "hostility": false,
+    "regionId": "66666666-6666-6666-6666-666666666666"
+  },
+  {
+    "name": "Kira Coldveil",
+    "role": "Merchant",
+    "level": 50,
+    "hostility": false,
+    "regionId": "66666666-6666-6666-6666-666666666666"
+  },
+  {
+    "name": "Isadora Pallgrove",
+    "role": "Innkeeper",
+    "level": 46,
+    "hostility": false,
+    "regionId": "66666666-6666-6666-6666-666666666666"
+  },
+  {
+    "name": "Sigrid Ashmantle",
+    "role": "Merchant",
+    "level": 43,
+    "hostility": false,
+    "regionId": "55555555-5555-5555-5555-555555555555"
   }
 ]

@@ -498,5 +498,565 @@
     "name": "Máscara do Inquisidor Morto",
     "category": "Item",
     "level": 33
+  },
+  {
+    "name": "Rato Gigante do Celeiro",
+    "category": "Monster",
+    "level": 1
+  },
+  {
+    "name": "Corvo Agoirento",
+    "category": "Monster",
+    "level": 2
+  },
+  {
+    "name": "Fungo Venenoso da Floresta",
+    "category": "Item",
+    "level": 2
+  },
+  {
+    "name": "Amuleto Enferrujado sem Dono",
+    "category": "Item",
+    "level": 3
+  },
+  {
+    "name": "Órfão que Viu o Massacre",
+    "category": "Person",
+    "level": 2
+  },
+  {
+    "name": "Fazendeiro Desaparecido",
+    "category": "Person",
+    "level": 3
+  },
+  {
+    "name": "Cemitério de Animais Corrompido",
+    "category": "Location",
+    "level": 4
+  },
+  {
+    "name": "Pergaminho Iniciático Rasgado",
+    "category": "Mage",
+    "level": 3
+  },
+  {
+    "name": "Espada Quebrada de Milícia",
+    "category": "Warrior",
+    "level": 4
+  },
+  {
+    "name": "Bolsa de Moedas Roubada",
+    "category": "Rogue",
+    "level": 3
+  },
+  {
+    "name": "Ícone Sagrado Enterrado",
+    "category": "Cleric",
+    "level": 4
+  },
+  {
+    "name": "Sapo Mutante das Águas Negras",
+    "category": "Monster",
+    "level": 6
+  },
+  {
+    "name": "Zumbi do Pântano",
+    "category": "Monster",
+    "level": 8
+  },
+  {
+    "name": "Serpente de Duas Cabeças",
+    "category": "Monster",
+    "level": 11
+  },
+  {
+    "name": "Bruxa da Lama Encantada",
+    "category": "Monster",
+    "level": 13
+  },
+  {
+    "name": "Erva Paralítica do Charco",
+    "category": "Item",
+    "level": 7
+  },
+  {
+    "name": "Bússola que Aponta para o Mal",
+    "category": "Item",
+    "level": 10
+  },
+  {
+    "name": "Olho Conservado em Âmbar Negro",
+    "category": "Item",
+    "level": 13
+  },
+  {
+    "name": "Pescador que Viu a Criatura",
+    "category": "Person",
+    "level": 7
+  },
+  {
+    "name": "Soldado Infectado pela Lama",
+    "category": "Person",
+    "level": 9
+  },
+  {
+    "name": "Contrabandista Preso na Fortaleza",
+    "category": "Person",
+    "level": 12
+  },
+  {
+    "name": "Ponte Podre sobre o Abismo Verde",
+    "category": "Location",
+    "level": 8
+  },
+  {
+    "name": "Laboratório de Venenos Abandonado",
+    "category": "Location",
+    "level": 11
+  },
+  {
+    "name": "Toca do Caçador de Recompensas",
+    "category": "Location",
+    "level": 14
+  },
+  {
+    "name": "Tábua de Runas Parcialmente Decifrada",
+    "category": "Mage",
+    "level": 9
+  },
+  {
+    "name": "Escudo da Milícia Traída",
+    "category": "Warrior",
+    "level": 10
+  },
+  {
+    "name": "Diário Cifrado do Informante",
+    "category": "Rogue",
+    "level": 11
+  },
+  {
+    "name": "Sino Funerário Enterrado Vivo",
+    "category": "Cleric",
+    "level": 12
+  },
+  {
+    "name": "Escorpião Colossal das Dunas",
+    "category": "Monster",
+    "level": 16
+  },
+  {
+    "name": "Múmia do Faraó Esquecido",
+    "category": "Monster",
+    "level": 20
+  },
+  {
+    "name": "Djinn Aprisionado Iracundo",
+    "category": "Monster",
+    "level": 23
+  },
+  {
+    "name": "Areia que Engole Vivos",
+    "category": "Location",
+    "level": 17
+  },
+  {
+    "name": "Oásis Envenenado pelos Sábios",
+    "category": "Location",
+    "level": 19
+  },
+  {
+    "name": "Templo Soterrado da Serpente Solar",
+    "category": "Location",
+    "level": 22
+  },
+  {
+    "name": "Caravana Fantasma de Mercadores",
+    "category": "Location",
+    "level": 24
+  },
+  {
+    "name": "Arma de Obsidiana Solar",
+    "category": "Item",
+    "level": 17
+  },
+  {
+    "name": "Tinta de Sangue para Runas",
+    "category": "Item",
+    "level": 19
+  },
+  {
+    "name": "Mapa do Aqueduto Perdido",
+    "category": "Item",
+    "level": 23
+  },
+  {
+    "name": "Nômade com Rota Secreta",
+    "category": "Person",
+    "level": 16
+  },
+  {
+    "name": "Sacerdotisa do Sol Corrompida",
+    "category": "Person",
+    "level": 18
+  },
+  {
+    "name": "Escrava Fugitiva com Tatuagem Arcana",
+    "category": "Person",
+    "level": 21
+  },
+  {
+    "name": "Traficante de Relíquias Proibidas",
+    "category": "Person",
+    "level": 24
+  },
+  {
+    "name": "Grimório das Areias Vivas",
+    "category": "Mage",
+    "level": 17
+  },
+  {
+    "name": "Espelho de Ilusão do Deserto",
+    "category": "Mage",
+    "level": 21
+  },
+  {
+    "name": "Capitão do Exército das Dunas",
+    "category": "Warrior",
+    "level": 18
+  },
+  {
+    "name": "Fortaleza de Areia Encantada",
+    "category": "Warrior",
+    "level": 24
+  },
+  {
+    "name": "Impressão Digital em Pergaminho Real",
+    "category": "Rogue",
+    "level": 16
+  },
+  {
+    "name": "Rota de Contrabando pelo Deserto",
+    "category": "Rogue",
+    "level": 22
+  },
+  {
+    "name": "Altar de Sacrifício ao Sol Negro",
+    "category": "Cleric",
+    "level": 19
+  },
+  {
+    "name": "Ossada do Clérigo Herético",
+    "category": "Cleric",
+    "level": 25
+  },
+  {
+    "name": "Urso das Neves Amaldiçoado",
+    "category": "Monster",
+    "level": 26
+  },
+  {
+    "name": "Elemental de Gelo Corrompido",
+    "category": "Monster",
+    "level": 29
+  },
+  {
+    "name": "Gigante das Montanhas Cego",
+    "category": "Monster",
+    "level": 32
+  },
+  {
+    "name": "Harpia da Tempestade Eterna",
+    "category": "Monster",
+    "level": 34
+  },
+  {
+    "name": "Caverna de Cristal Instável",
+    "category": "Location",
+    "level": 27
+  },
+  {
+    "name": "Monastério Abandonado nas Alturas",
+    "category": "Location",
+    "level": 30
+  },
+  {
+    "name": "Passagem Gelada dos Exilados",
+    "category": "Location",
+    "level": 33
+  },
+  {
+    "name": "Pedra Rúnica Gravada em Gelo",
+    "category": "Item",
+    "level": 26
+  },
+  {
+    "name": "Coração de Elemental Congelado",
+    "category": "Item",
+    "level": 30
+  },
+  {
+    "name": "Capa do Montanhês Desaparecido",
+    "category": "Item",
+    "level": 33
+  },
+  {
+    "name": "Ermitão com Memória dos Antigos",
+    "category": "Person",
+    "level": 27
+  },
+  {
+    "name": "Alpinista Corrompido pelo Frio",
+    "category": "Person",
+    "level": 29
+  },
+  {
+    "name": "Sacerdote Exilado das Montanhas",
+    "category": "Person",
+    "level": 32
+  },
+  {
+    "name": "General das Neves Traído",
+    "category": "Person",
+    "level": 34
+  },
+  {
+    "name": "Tomo Selado em Gelo Arcano",
+    "category": "Mage",
+    "level": 28
+  },
+  {
+    "name": "Feitiço de Tempestade Sem Controle",
+    "category": "Mage",
+    "level": 33
+  },
+  {
+    "name": "Fortaleza Glacial Sitiada",
+    "category": "Warrior",
+    "level": 26
+  },
+  {
+    "name": "Veterano das Guerras do Norte",
+    "category": "Warrior",
+    "level": 31
+  },
+  {
+    "name": "Passagem Secreta sob o Gelo",
+    "category": "Rogue",
+    "level": 27
+  },
+  {
+    "name": "Identidade do Traidor da Guilda Fria",
+    "category": "Rogue",
+    "level": 34
+  },
+  {
+    "name": "Relicário Congelado Profanado",
+    "category": "Cleric",
+    "level": 29
+  },
+  {
+    "name": "Cerimônia de Gelo Interrompida",
+    "category": "Cleric",
+    "level": 35
+  },
+  {
+    "name": "Golem de Pedra Ancestral",
+    "category": "Monster",
+    "level": 36
+  },
+  {
+    "name": "Espectro do Arquiteto Louco",
+    "category": "Monster",
+    "level": 39
+  },
+  {
+    "name": "Colosso de Bronze Reativado",
+    "category": "Monster",
+    "level": 43
+  },
+  {
+    "name": "Câmara de Armadilhas Ativas",
+    "category": "Location",
+    "level": 37
+  },
+  {
+    "name": "Biblioteca Subterrânea Selada",
+    "category": "Location",
+    "level": 40
+  },
+  {
+    "name": "Trono do Imperador Morto-Vivo",
+    "category": "Location",
+    "level": 44
+  },
+  {
+    "name": "Fragmento de Pedra Filosofal",
+    "category": "Item",
+    "level": 38
+  },
+  {
+    "name": "Cetro do Último Rei da Cidade",
+    "category": "Item",
+    "level": 41
+  },
+  {
+    "name": "Diário do Explorador Abissal",
+    "category": "Item",
+    "level": 36
+  },
+  {
+    "name": "Sobrevivente que Conhece o Centro",
+    "category": "Person",
+    "level": 37
+  },
+  {
+    "name": "Arqueóloga Obcecada e Corrompida",
+    "category": "Person",
+    "level": 40
+  },
+  {
+    "name": "Descendente do Último Rei",
+    "category": "Person",
+    "level": 43
+  },
+  {
+    "name": "Rede de Magia Instável das Ruínas",
+    "category": "Mage",
+    "level": 36
+  },
+  {
+    "name": "Entidade Arcana Presa na Pedra",
+    "category": "Mage",
+    "level": 42
+  },
+  {
+    "name": "Armadura Animada do Guarda Real",
+    "category": "Warrior",
+    "level": 38
+  },
+  {
+    "name": "Ordem dos Últimos Guardiões",
+    "category": "Warrior",
+    "level": 44
+  },
+  {
+    "name": "Mapa das Câmaras do Tesouro",
+    "category": "Rogue",
+    "level": 37
+  },
+  {
+    "name": "Ladrão Preso na Câmara de Armadilhas",
+    "category": "Rogue",
+    "level": 41
+  },
+  {
+    "name": "Altar da Ressurreição Interrompida",
+    "category": "Cleric",
+    "level": 39
+  },
+  {
+    "name": "Maldição do Clérigo Fundador",
+    "category": "Cleric",
+    "level": 43
+  },
+  {
+    "name": "Demônio Maior do Abismo",
+    "category": "Monster",
+    "level": 46
+  },
+  {
+    "name": "Leviatã das Profundezas Ardentes",
+    "category": "Monster",
+    "level": 49
+  },
+  {
+    "name": "Anjo Caído Corrompido",
+    "category": "Monster",
+    "level": 50
+  },
+  {
+    "name": "Cratera Central Instável",
+    "category": "Location",
+    "level": 46
+  },
+  {
+    "name": "Altar do Sacrifício Final",
+    "category": "Location",
+    "level": 48
+  },
+  {
+    "name": "Núcleo da Destruição Ancestral",
+    "category": "Location",
+    "level": 50
+  },
+  {
+    "name": "Fragmento do Deus Morto",
+    "category": "Item",
+    "level": 47
+  },
+  {
+    "name": "Corrente que Prende o Caos",
+    "category": "Item",
+    "level": 49
+  },
+  {
+    "name": "Lacre do Portal Primordial",
+    "category": "Item",
+    "level": 50
+  },
+  {
+    "name": "Último Sobrevivente da Destruição",
+    "category": "Person",
+    "level": 46
+  },
+  {
+    "name": "Arauto do Caos Encarnado",
+    "category": "Person",
+    "level": 48
+  },
+  {
+    "name": "Herói Corrompido pela Cratera",
+    "category": "Person",
+    "level": 50
+  },
+  {
+    "name": "Tomo do Fim de Tudo",
+    "category": "Mage",
+    "level": 47
+  },
+  {
+    "name": "Ritual de Abertura do Véu Final",
+    "category": "Mage",
+    "level": 50
+  },
+  {
+    "name": "Colosso de Guerra do Apocalipse",
+    "category": "Warrior",
+    "level": 48
+  },
+  {
+    "name": "Estandarte da Legião Destruidora",
+    "category": "Warrior",
+    "level": 50
+  },
+  {
+    "name": "Segredo que Destruiu a Civilização",
+    "category": "Rogue",
+    "level": 47
+  },
+  {
+    "name": "Identidade do Traidor Original",
+    "category": "Rogue",
+    "level": 49
+  },
+  {
+    "name": "Relíquia do Deus que Foi Morto",
+    "category": "Cleric",
+    "level": 46
+  },
+  {
+    "name": "Profecia do Segundo Colapso",
+    "category": "Cleric",
+    "level": 50
   }
 ]

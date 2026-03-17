@@ -114,6 +114,8 @@ model Hero {
   gold       Int       @default(0)
   reputation Int       @default(0)
   quests     Quest[]
+  region     Region    @relation(fields: [regionId], references: [id])
+  regionId  String    @map("region_id")
 
   @@map("heroes")
 }
@@ -125,6 +127,8 @@ model Actor {
   level     Int
   hostility Boolean
   quests    Quest[]
+  region    Region    @relation(fields: [regionId], references: [id])
+  regionId  String    @map("region_id")
 
   @@map("actors")
 }
@@ -150,9 +154,24 @@ model Quest {
   objectives  Objective[]
   goldReward  Int         @map("gold_reward")
   xpReward    Int         @map("xp_reward")
-  hero        Hero        @relation(fields: [heroId], references: [id])
-  heroId      String      @map("hero_id")
+  hero        Hero?       @relation(fields: [heroId], references: [id])
+  heroId      String?     @map("hero_id")
   status      QuestStatus @default(Available)
+  region      Region      @relation(fields: [regionId], references: [id])
+  regionId    String      @map("region_id")
 
   @@map("quests")
+}
+
+model Region {
+  id          String   @id @default(uuid())
+  name        String
+  description String
+  minLevel    Int      @map("min_level")
+  maxLevel    Int      @map("max_level")
+  heroes      Hero[]
+  actors      Actor[]
+  quests      Quest[]
+
+  @@map("regions")
 }

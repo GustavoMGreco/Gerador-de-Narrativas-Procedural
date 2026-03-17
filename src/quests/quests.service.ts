@@ -11,8 +11,9 @@ import * as crypto from 'crypto';
 export class QuestsService {
   constructor(private readonly prisma: PrismaService, private readonly formatter: QuestsFormatter) {}
 
-  private async sortActor(heroLevel: number, heroReputation: number): Promise<Actor> {
+  private async sortActor(heroLevel: number, heroReputation: number, regionId: string): Promise<Actor> {
     const actorFilter = {
+      regionId: regionId,
       level: {
         gte: heroLevel - 5,
         lte: heroLevel + 5
@@ -23,7 +24,7 @@ export class QuestsService {
     const numActors = await this.prisma.actor.count({ where: actorFilter });
 
     if (numActors === 0) {
-      throw new Error(`Nenhum ator encontrado para o nível ${heroLevel}.`);
+      throw new NotFoundException('Não há NPCs nesta região com tarefas adequadas para o seu nível e reputação, hora de viajar.');
     }
 
     const randomNumber = Math.floor(Math.random() * numActors);
@@ -70,8 +71,14 @@ export class QuestsService {
 }
 
   private async createSingleObjective(action: ActionType, heroLevel: number, questId: string): Promise<ObjectiveDto> {
-    const quantity = Math.floor(Math.random() * 10) + 1;
     const target = await this.findValidTarget(action, heroLevel);
+
+    let quantity = 1; 
+
+    if (target.category === TargetCategory.Monster || target.category === TargetCategory.Item) {
+      quantity = Math.floor(Math.random() * 10) + 1;
+    }
+
     return {
       id: crypto.randomUUID(),
       action,
@@ -106,7 +113,7 @@ export class QuestsService {
       throw new NotFoundException('Herói não encontrado no banco de dados.');
     }
 
-    const actor = await this.sortActor(hero.level, hero.reputation);
+    const actor = await this.sortActor(hero.level, hero.reputation, hero.regionId);
     const questId = crypto.randomUUID();
 
     const [title, description] = this.formatter.generateNarrative(actor)
@@ -131,7 +138,8 @@ export class QuestsService {
         },
         goldReward: gold,
         xpReward: xp,
-        heroId: hero.id
+        heroId: hero.id,
+        regionId: hero.regionId
       },
   
     });
@@ -153,7 +161,9 @@ export class QuestsService {
     const rawQuests = await this.prisma.quest.findMany({
       include: {
         actor: true,
-        objectives: true
+        objectives: {
+          include: { target: true }
+        }
       },
     });
 
@@ -168,7 +178,7 @@ export class QuestsService {
         quantity: obj.quantity,
         targetId: obj.targetId,
         questId: obj.questId,
-        description: `${actionTranslator[obj.action]} ${obj.quantity} alvo(s)`
+        description: this.formatter.formatObjectiveDescription(obj.action, obj.quantity, obj.target)
       })),
       goldReward: quest.goldReward,
       xpReward: quest.xpReward
@@ -187,6 +197,9 @@ export class QuestsService {
 
     if (quest.status !== QuestStatus.Available) {
       throw new BadRequestException('Esta quest não pode mais ser aceita.');
+    }
+    if (!quest.hero) {
+      throw new BadRequestException('Esta quest não está vinculada a um herói válido.');
     }
 
     const limite = 1 + Math.floor(quest.hero.level / 5);
@@ -217,6 +230,11 @@ export class QuestsService {
     if (!quest || quest.status !== QuestStatus.Accepted) {
       throw new BadRequestException('Apenas quests aceitas podem ser concluídas.');
     }
+    if (!quest.hero || !quest.heroId) {
+      throw new BadRequestException('Esta quest não está vinculada a um herói válido.');
+    }
+
+    const validHeroId = quest.heroId;
 
     return this.prisma.$transaction(async (tx) => {  // transaction: garante que ou tudo acontece, ou nada acontece
       await tx.quest.update({
@@ -225,7 +243,7 @@ export class QuestsService {
       });
 
       return tx.hero.update({
-        where: { id: quest.heroId },
+        where: { id: validHeroId },
         data: {
           gold: { increment: quest.goldReward },
           experience: { increment: quest.xpReward },
@@ -236,15 +254,23 @@ export class QuestsService {
   }
 
   async cancelQuest(id: string) {
-    const quest = await this.prisma.quest.findUnique({ where: { id } });
+    const quest = await this.prisma.quest.findUnique({
+      where: { id },
+      include: { hero: true }
+    });
 
     if (!quest || quest.status !== QuestStatus.Accepted) {
       throw new BadRequestException('Apenas quests aceitas podem ser canceladas.')
     }
+    if (!quest.hero || !quest.heroId) {
+      throw new BadRequestException('Esta quest não está vinculada a um herói válido.');
+    }
+
+    const validHeroId = quest.heroId;
 
     return this.prisma.$transaction(async (tx) => {
       await tx.hero.update({
-        where: { id: quest.heroId },
+        where: { id: validHeroId },
         data: { reputation: { increment: -10 } }
       });
 
