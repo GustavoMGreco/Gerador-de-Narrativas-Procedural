@@ -15,21 +15,26 @@ import {
 
 @Injectable()
 export class QuestsFormatter {
+
+  private pickRandom<T>(arr: T[]): T {
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  private interpolate(template: string, actor: Actor): string {
+    return template
+      .replace('{name}', actor.name)
+      .replace('{role}', roleTranslator[actor.role]);
+  }
+
   generateNarrative(actor: Actor): string[] {
-    const randFTitles       = Math.floor(Math.random() * friendlyTemplates.titles.length);
-    const randFDescriptions = Math.floor(Math.random() * friendlyTemplates.descriptions.length);
-    const randHTitles       = Math.floor(Math.random() * hostileTemplates.titles.length);
-    const randHDescriptions = Math.floor(Math.random() * hostileTemplates.descriptions.length);
+    const templates = actor.hostility ? hostileTemplates : friendlyTemplates;
 
-    if (actor.hostility) {
-      const title       = `${hostileTemplates.titles[randHTitles]} ${roleTranslator[actor.role]}`;
-      const description = `${roleTranslator[actor.role]} ${actor.name} ${hostileTemplates.descriptions[randHDescriptions]}`;
-      if (!title || !description) throw new Error('Falha ao criar narrativa.');
-      return [title, description];
-    }
+    const rawTitle       = this.pickRandom(templates.titles);
+    const rawDescription = this.pickRandom(templates.descriptions);
 
-    const title       = `${friendlyTemplates.titles[randFTitles]} ${roleTranslator[actor.role]}`;
-    const description = `${roleTranslator[actor.role]} ${actor.name} ${friendlyTemplates.descriptions[randFDescriptions]}`;
+    const title       = this.interpolate(rawTitle, actor);
+    const description = `${roleTranslator[actor.role]} ${actor.name} ${rawDescription}`;
+
     if (!title || !description) throw new Error('Falha ao criar narrativa.');
     return [title, description];
   }

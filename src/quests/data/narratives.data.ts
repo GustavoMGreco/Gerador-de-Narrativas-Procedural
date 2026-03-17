@@ -1,12 +1,27 @@
-
 export const friendlyTemplates = {
-  "titles": [
-    "O Pedido do", "A Busca do", "O Resgate do", "A Encomenda do", "O Desejo do", 
-    "A Tarefa do", "O Apelo do", "A Oferta do", "O Favor do", "A Preocupação do", 
-    "A Missão do", "O Chamado do", "A Requisição do", "O Dilema do", "A Necessidade do", 
-    "O Mistério do", "A Súplica do", "O Contrato do", "A Urgência do", "O Convite do"
+  titles: [
+    "O Desespero de {name}",
+    "O Chamado de {name}",
+    "A Súplica do {role} {name}",
+    "O Contrato de {name}",
+    "A Missão Urgente de {name}",
+    "O Pedido Sombrio de {name}",
+    "A Encomenda Perigosa de {name}",
+    "Os Problemas do {role} {name}",
+    "O Favor Silencioso de {name}",
+    "A Preocupação do {role} {name}",
+    "O Dilema de {name}",
+    "O Apelo Desesperado de {name}",
+    "A Oferta do {role} {name}",
+    "O Mistério que Assombra {name}",
+    "O Segredo que {name} Carrega",
+    "A Urgência de {name}",
+    "A Busca do {role} {name}",
+    "O Fardo de {name}",
+    "A Última Esperança de {name}",
+    "O Que {name} Não Pode Dizer em Voz Alta",
   ],
-  "descriptions": [
+  descriptions: [
     "precisa de sua ajuda urgentemente com um problema local.",
     "oferece uma recompensa para quem resolver uma questão delicada.",
     "pede auxílio para proteger sua mercadoria de saqueadores.",
@@ -26,18 +41,34 @@ export const friendlyTemplates = {
     "procura um herói para limpar uma área infestada de feras.",
     "solicita sua presença para investigar um assassinato não resolvido.",
     "tem metade de um mapa do tesouro e precisa de um parceiro.",
-    "implora para que você busque a cura para uma praga que assola o vilarejo."
-  ]
+    "implora para que você busque a cura para uma praga que assola o vilarejo.",
+  ],
 };
 
 export const hostileTemplates = {
-  "titles": [
-    "A Ameaça do", "A Extorsão do", "O Esquema do", "A Chantagem do", "O Ultimato do", 
-    "A Armadilha do", "O Plano do", "A Vingança do", "O Golpe do", "A Emboscada do", 
-    "O Jogo do", "A Conspiração do", "O Assalto do", "A Retaliação do", "O Desafio do", 
-    "A Fúria do", "O Engano do", "A Coação do", "O Domínio do", "A Sentença do"
+  titles: [
+    "A Ameaça de {name}",
+    "O Ultimato do {role} {name}",
+    "A Extorsão de {name}",
+    "O Esquema Obscuro de {name}",
+    "A Chantagem do {role} {name}",
+    "A Armadilha Montada por {name}",
+    "O Plano Sombrio de {name}",
+    "A Vingança do {role} {name}",
+    "O Golpe de {name}",
+    "A Emboscada Orquestrada por {name}",
+    "O Jogo Sujo de {name}",
+    "A Conspiração do {role} {name}",
+    "O Assalto Planejado por {name}",
+    "A Retaliação de {name}",
+    "O Desafio Mortal de {name}",
+    "A Fúria do {role} {name}",
+    "O Engano de {name}",
+    "A Coação do {role} {name}",
+    "O Domínio de {name} sobre a Região",
+    "A Sentença Proferida por {name}",
   ],
-  "descriptions": [
+  descriptions: [
     "exige a sua cooperação imediata, ou haverá consequências letais.",
     "tem um trabalho sujo que precisa ser feito sem testemunhas.",
     "obriga você a participar de um plano obscuro contra a coroa.",
@@ -57,6 +88,6 @@ export const hostileTemplates = {
     "usa um veneno de ação lenta em você para garantir sua obediência.",
     "obriga você a invadir um local de alta segurança e roubar documentos.",
     "demanda que você sequestre um alvo importante para interrogatório.",
-    "jura vingança e morte se você falhar na missão que lhe foi imposta."
-  ]
+    "jura vingança e morte se você falhar na missão que lhe foi imposta.",
+  ],
 };
