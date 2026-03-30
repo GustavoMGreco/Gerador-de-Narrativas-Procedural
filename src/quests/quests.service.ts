@@ -1,10 +1,11 @@
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
-import { Actor, ActionType, QuestStatus, Target, TargetCategory } from '@prisma/client';
+import { Actor, Hero, ActionType, QuestStatus, Target, TargetCategory, HeroClass } from '@prisma/client';
 import { ObjectiveDto, QuestDto } from './dto/quest-response.dto';
 import { GenerateQuestDto } from './dto/generate-quest.dto';
 import { QuestsFormatter } from './quests.formatter';
-import { actionPool, actionToTargetCategory, objectiveChains, actionTranslator } from './quests.dictionaries';
+import { actionPool, actionToTargetCategory, objectiveChains, roleTranslator } from './quests.dictionaries';
+import { questGraph, QuestContext, selectNextAction } from './quests-graph.engine';
 import * as crypto from 'crypto';
 
 @Injectable()
@@ -25,7 +26,7 @@ export class QuestsService {
 
     if (numActors === 0) {
       throw new NotFoundException('Não há NPCs nesta região com tarefas adequadas para o seu nível e reputação, hora de viajar.');
-    }
+    };
 
     const randomNumber = Math.floor(Math.random() * numActors);
 
@@ -36,7 +37,7 @@ export class QuestsService {
 
     if (!actor) throw new Error('Falha ao sortear o ator.');
     return actor;
-  }
+  };
 
   private async findValidTarget(action: ActionType, heroLevel: number): Promise<Target> {
   const allowedCategories = actionToTargetCategory[action] || [TargetCategory.Monster];
@@ -59,7 +60,7 @@ export class QuestsService {
      if(fallback) return fallback;
      
      throw new Error(`Nenhum alvo encontrado para a ação ${action}.`);
-  }
+  };
 
   const randomIndex = Math.floor(Math.random() * count);
   const target = await this.prisma.target.findFirst({
@@ -68,7 +69,7 @@ export class QuestsService {
   });
 
   return target!; // o ! avisa ao TS que não é nulo
-}
+};
 
   private async createSingleObjective(action: ActionType, heroLevel: number, questId: string): Promise<ObjectiveDto> {
     const target = await this.findValidTarget(action, heroLevel);
@@ -87,37 +88,67 @@ export class QuestsService {
       questId,
       description: this.formatter.formatObjectiveDescription(action, quantity, target)
     };
-  }
+  };
 
-  public async generateObjectives(questId: string, heroClass: string, heroLevel: number): Promise<ObjectiveDto[]> {
-    const listActions = actionPool[heroClass] || [ActionType.Gather, ActionType.Trade, ActionType.Investigate];
-    const action1 = listActions[Math.floor(Math.random() * listActions.length)];
-  
-    const objective1 = await this.createSingleObjective(action1, heroLevel, questId);
+  public async generateObjectives(questId: string, hero: Hero, actor: Actor): Promise<{ objectives: ObjectiveDto[], tags: Set<string> }> {
+    const context: QuestContext = {
+      heroLevel: hero.level,
+      heroClass: hero.class,
+      actorRole: actor.role,
+      hostility: actor.hostility,
+      intensity: hero.class === HeroClass.Warrior ? 8 : 2,
+      tags: new Set<string>(),
+      actionHistory: []
+    };
 
-    const listAction2 = objectiveChains[action1] || [ActionType.Gather, ActionType.Trade, ActionType.Investigate];
-    const action2 = listAction2[Math.floor(Math.random() * listAction2.length)];
-  
-    const objective2 = await this.createSingleObjective(action2, heroLevel, questId);
+    let currentAction: ActionType = hero.class === HeroClass.Warrior ? ActionType.Siege : ActionType.Infiltrate;
+    let objectives: ObjectiveDto[] = [];
 
-    return [objective1, objective2];
-}
+    for (let i = 0; i < 3; i++) {
+      let node = questGraph[currentAction];
+      if (!node) break;
+
+      context.actionHistory.push(currentAction);
+      node.narrativeTags.forEach(tag => context.tags.add(tag));
+      
+      objectives.push(await this.createSingleObjective(currentAction, hero.level, questId));
+
+      let next = selectNextAction(node, context);
+      if (!next) break;
+
+      currentAction = next;
+    };
+
+    return { objectives, tags: context.tags };
+  };
 
   public async generateQuest(dto: GenerateQuestDto): Promise<QuestDto> {
     const hero = await this.prisma.hero.findUnique({
       where: {
         id: dto.heroId
       }
-    })
+    });
     if (!hero) {
       throw new NotFoundException('Herói não encontrado no banco de dados.');
-    }
+    };
 
     const actor = await this.sortActor(hero.level, hero.reputation, hero.regionId);
     const questId = crypto.randomUUID();
 
-    const [title, description] = this.formatter.generateNarrative(actor)
-    const objectives = await this.generateObjectives(questId, hero.class, hero.level);
+    const result = await this.generateObjectives(questId, hero, actor);
+    const objectives = result.objectives;
+
+    let title = 'Tarefa desconhecida';
+    let description = 'Descrição desconhecida'
+
+    if (result.tags.has('assault') && result.tags.has('assassination')) {
+      title = `O Extermínio Exigido por ${actor.name}`;
+      description = `O ${roleTranslator[actor.role]} declarou guerra aberta. Lidere um ataque massivo ao alvo e garanta que não haja sobreviventes no comando.`;
+    };
+    if (result.tags.has('stealth') && result.tags.has('valuable')) {
+      title = `O Roubo Silencioso de ${actor.name}`;
+      description = `Esta operação não pode deixar rastros. Infiltre-se no local designado e recupere o alvo sem alertar os guardas.`;
+    };
 
     const gold = actor.level * 15;
     const xp = actor.level * 25;
@@ -155,7 +186,7 @@ export class QuestsService {
     };
 
     return quest;
-  }
+  };
 
   async findAll(): Promise<QuestDto[]> {
     const rawQuests = await this.prisma.quest.findMany({
@@ -197,10 +228,10 @@ export class QuestsService {
 
     if (quest.status !== QuestStatus.Available) {
       throw new BadRequestException('Esta quest não pode mais ser aceita.');
-    }
+    };
     if (!quest.hero) {
       throw new BadRequestException('Esta quest não está vinculada a um herói válido.');
-    }
+    };
 
     const limite = 1 + Math.floor(quest.hero.level / 5);
 
@@ -229,10 +260,10 @@ export class QuestsService {
 
     if (!quest || quest.status !== QuestStatus.Accepted) {
       throw new BadRequestException('Apenas quests aceitas podem ser concluídas.');
-    }
+    };
     if (!quest.hero || !quest.heroId) {
       throw new BadRequestException('Esta quest não está vinculada a um herói válido.');
-    }
+    };
 
     const validHeroId = quest.heroId;
 
@@ -251,7 +282,7 @@ export class QuestsService {
         }
       });
     });
-  }
+  };
 
   async cancelQuest(id: string) {
     const quest = await this.prisma.quest.findUnique({
@@ -261,10 +292,10 @@ export class QuestsService {
 
     if (!quest || quest.status !== QuestStatus.Accepted) {
       throw new BadRequestException('Apenas quests aceitas podem ser canceladas.')
-    }
+    };
     if (!quest.hero || !quest.heroId) {
       throw new BadRequestException('Esta quest não está vinculada a um herói válido.');
-    }
+    };
 
     const validHeroId = quest.heroId;
 
@@ -281,7 +312,7 @@ export class QuestsService {
           goldReward: { increment: Math.floor(-(quest.goldReward * 0.3)) },
           xpReward: { increment: Math.floor(-(quest.xpReward * 0.3)) }
         }
-      })
-    })
-  }
+      });
+    });
+  };
 }
