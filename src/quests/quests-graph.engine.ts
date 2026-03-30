@@ -73,6 +73,30 @@ export const questGraph: Partial<Record<ActionType, ActionNode>> = {
         baseWeight: 5
       }
     ]
+  },
+  [ActionType.Siege]: {
+    action: ActionType.Siege,
+    allowedTargets: [TargetCategory.Location],
+    narrativeTags: ['assault', 'criminals', 'war'],
+    precondition: (ctxt) => ctxt.intensity >= 5 || ctxt.heroClass === HeroClass.Warrior,
+    edges: [
+      {
+        to: ActionType.Execute,
+        baseWeight: 10,
+        weightModifier: (ctxt) => ctxt.actorRole === ActorRole.Mayor ? 2 : 1
+      },
+      {
+        to: ActionType.Rescue,
+        baseWeight: 5
+      }
+    ]
+  },
+  [ActionType.Execute]: {
+    action: ActionType.Execute,
+    allowedTargets: [TargetCategory.Person, TargetCategory.Monster, TargetCategory.Warrior],
+    narrativeTags: ['assassination', 'gore'],
+    precondition: (ctxt) => ctxt.actionHistory.includes(ActionType.Siege) || ctxt.actionHistory.includes(ActionType.Challenge),
+    edges: []
   }
 }
 
