@@ -19,7 +19,7 @@ export interface Edge {
   baseWeight: number;
   
   // ex: se o herói for rogue, multiplica a chance de ir para 'steal' por 2.
-  weightModifier?: (ctxt: QuestContext) => number;
+  weightModifier?: (ctxt: QuestContext) => number;  // opcional, pode ser usado para customizar o peso dinamicamente
 }
 
 // a ação (nó)
