@@ -72,6 +72,36 @@ export class QuestsService {
   return target!; // o ! avisa ao TS que não é nulo
 };
 
+private getEntryAction(heroClass: HeroClass): ActionType {
+    const genericEntries = [
+      ActionType.Investigate, 
+      ActionType.Gather, 
+      ActionType.Guard, 
+      ActionType.Negotiate, 
+      ActionType.Escort
+    ];
+    
+    let classEntries: ActionType[] = [];
+    switch (heroClass) {
+      case HeroClass.Warrior: 
+        classEntries = [ActionType.Challenge, ActionType.Siege, ActionType.Rally]; 
+        break;
+      case HeroClass.Rogue: 
+        classEntries = [ActionType.Infiltrate, ActionType.Spy, ActionType.Pickpocket]; 
+        break;
+      case HeroClass.Mage: 
+        classEntries = [ActionType.Decipher, ActionType.Ritual]; 
+        break;
+      case HeroClass.Cleric: 
+        classEntries = [ActionType.Exorcise, ActionType.Convert]; 
+        break;
+    }
+
+    const possibleEntries = [...genericEntries, ...classEntries];
+    
+    return possibleEntries[Math.floor(Math.random() * possibleEntries.length)];
+  }
+
   private async createSingleObjective(action: ActionType, heroLevel: number, questId: string): Promise<ObjectiveDto> {
     const target = await this.findValidTarget(action, heroLevel);
 
@@ -102,7 +132,7 @@ export class QuestsService {
       actionHistory: []
     };
 
-    let currentAction: ActionType = hero.class === HeroClass.Warrior ? ActionType.Siege : ActionType.Infiltrate;
+    let currentAction: ActionType = this.getEntryAction(hero.class);
     let objectives: ObjectiveDto[] = [];
 
     for (let i = 0; i < 3; i++) {
@@ -127,27 +157,35 @@ export class QuestsService {
     let lista: QuestTemplate[] = [];
     let title = '';
     let description = '';
+    let bestScore = 0;
 
     for (let template of questTemplates) {
-      if (template.requiredTags.every(tag => tags.has(tag))) {
-        lista.push(template);
-      };
-    };
+      const score = template.requiredTags.filter(tag => tags.has(tag)).length;
+
+      if (score > 0) {
+        if (score > bestScore) {
+          bestScore = score;
+          lista = [template]; 
+        } else if (score === bestScore) {
+          lista.push(template);
+        }
+      }
+    }
 
     if (lista.length === 0) {
       title = 'Uma Missão Sem sentido';
-      description = 'Você sente um vazio em sua alma e não sabe o que fazer.'
+      description = 'Você sente um vazio em sua alma e não sabe o que fazer.';
     } else {
       const randomTemplate: QuestTemplate = lista[Math.floor(Math.random() * lista.length)];
       title = randomTemplate.titles[Math.floor(Math.random() * randomTemplate.titles.length)];
       description = randomTemplate.descriptions[Math.floor(Math.random() * randomTemplate.descriptions.length)];
 
-      title = title.replace(/{Actor}/g, actorName);
-      description = description.replace(/{Region}/g, regionName);
-    };
+      title = title.replace(/{Actor}/g, actorName).replace(/{Region}/g, regionName);
+      description = description.replace(/{Actor}/g, actorName).replace(/{Region}/g, regionName);
+    }
 
-    return { title: title, description: description };
-  }
+    return { title, description };
+  };
 
   public async generateQuest(dto: GenerateQuestDto): Promise<QuestDto> {
     const hero = await this.prisma.hero.findUnique({

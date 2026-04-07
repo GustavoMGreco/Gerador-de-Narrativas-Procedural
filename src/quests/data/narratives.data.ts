@@ -487,4 +487,68 @@ export const questTemplates: QuestTemplate[] = [
       "{Actor} não sabe quem enviar a buscá-lo — todos os seus contatos em {Region} podem estar comprometidos. A missão chegou por um canal que ele não reconhece, através de uma pessoa que ele nunca viu. Estabelecer confiança suficiente para executar a fuga em tempo hábil é o primeiro obstáculo, e não é o menor.",
     ],
   },
+
+  // ==========================================
+  // REDES DE SEGURANÇA (CATCH-ALL TEMPLATES)
+  // ==========================================
+  {
+    requiredTags: ['magic'],
+    titles: [
+      "Assuntos Arcanos em {Region}", 
+      "O Problema Oculto de {Actor}", 
+      "Perturbação Mágica"
+    ],
+    descriptions: [
+      "As correntes de magia estão agitadas em {Region}. {Actor} precisa que você resolva um problema que olhos mundanos não compreendem.", 
+      "Um trabalho que exige talento arcano e nenhuma pergunta foi solicitado. Vá até o local e lide com a anomalia."
+    ]
+  },
+  {
+    requiredTags: ['war'],
+    titles: [
+      "Sangue e Aço para {Actor}", 
+      "Conflito Iminente em {Region}", 
+      "O Contrato de Batalha"
+    ],
+    descriptions: [
+      "{Actor} convocou guerreiros para um embate brutal. O aço vai cantar e você será pago para garantir que o lado certo vença.", 
+      "Não há espaço para diplomacia ou conversas longas. Marche para {Region} e faça o trabalho sujo com a força da sua lâmina."
+    ]
+  },
+  {
+    requiredTags: ['stealth'],
+    titles: [
+      "Trabalho nas Sombras em {Region}", 
+      "O Contrato Silencioso de {Actor}", 
+      "Sem Deixar Rastros"
+    ],
+    descriptions: [
+      "Para esta tarefa, o silêncio vale mais que o ouro. {Actor} exige que você opere fora da lei em {Region}.", 
+      "Guarde a espada e prepare as ferramentas. Um trabalho furtivo de alta prioridade acabou de cair nas suas mãos."
+    ]
+  },
+  {
+    requiredTags: ['holy'],
+    titles: [
+      "A Vontade Divina de {Actor}", 
+      "Intervenção Sagrada em {Region}", 
+      "A Luz Guia"
+    ],
+    descriptions: [
+      "Assuntos de fé e purificação. {Actor} confia nos seus votos para limpar a corrupção que assola a área.", 
+      "Onde a escuridão avança, a fé deve permanecer inabalável. Uma intervenção religiosa e direta é necessária em {Region}."
+    ]
+  },
+  {
+    requiredTags: ['trade'],
+    titles: [
+      "A Rota Comercial de {Actor}", 
+      "A Entrega Garantida", 
+      "Mercadorias e Moedas em {Region}"
+    ],
+    descriptions: [
+      "O fluxo de ouro não pode parar. {Actor} tem assuntos logísticos e comerciais que exigem braços fortes para garantir a transação.", 
+      "Um acordo comercial precisa ser finalizado em {Region}. Pegue o pagamento e garanta que o material chegue ao destino."
+    ]
+  }
 ];
