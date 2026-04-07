@@ -4,9 +4,9 @@ import { Actor, Hero, ActionType, QuestStatus, Target, TargetCategory, HeroClass
 import { ObjectiveDto, QuestDto } from './dto/quest-response.dto';
 import { GenerateQuestDto } from './dto/generate-quest.dto';
 import { QuestsFormatter } from './quests.formatter';
-import { actionPool, actionToTargetCategory, objectiveChains, roleTranslator } from './quests.dictionaries';
 import { questGraph, QuestContext, selectNextAction } from './quests-graph.engine';
 import * as crypto from 'crypto';
+import { QuestTemplate, questTemplates } from './data/narratives.data';
 
 @Injectable()
 export class QuestsService {
@@ -40,7 +40,8 @@ export class QuestsService {
   };
 
   private async findValidTarget(action: ActionType, heroLevel: number): Promise<Target> {
-  const allowedCategories = actionToTargetCategory[action] || [TargetCategory.Monster];
+  const node = questGraph[action];
+  const allowedCategories = node?.allowedTargets || [TargetCategory.Monster];
 
   const targetFilter = {
     category: { in: allowedCategories },
@@ -122,11 +123,38 @@ export class QuestsService {
     return { objectives, tags: context.tags };
   };
 
+  private async synthetizeNarrative(tags: Set<string>, actorName: string, regionName: string): Promise<{ title: string, description: string }> {
+    let lista: QuestTemplate[] = [];
+    let title = '';
+    let description = '';
+
+    for (let template of questTemplates) {
+      if (template.requiredTags.every(tag => tags.has(tag))) {
+        lista.push(template);
+      };
+    };
+
+    if (lista.length === 0) {
+      title = 'Uma Missão Sem sentido';
+      description = 'Você sente um vazio em sua alma e não sabe o que fazer.'
+    } else {
+      const randomTemplate: QuestTemplate = lista[Math.floor(Math.random() * lista.length)];
+      title = randomTemplate.titles[Math.floor(Math.random() * randomTemplate.titles.length)];
+      description = randomTemplate.descriptions[Math.floor(Math.random() * randomTemplate.descriptions.length)];
+
+      title = title.replace(/{Actor}/g, actorName);
+      description = description.replace(/{Region}/g, regionName);
+    };
+
+    return { title: title, description: description };
+  }
+
   public async generateQuest(dto: GenerateQuestDto): Promise<QuestDto> {
     const hero = await this.prisma.hero.findUnique({
       where: {
         id: dto.heroId
-      }
+      },
+      include: { region: true }
     });
     if (!hero) {
       throw new NotFoundException('Herói não encontrado no banco de dados.');
@@ -138,17 +166,7 @@ export class QuestsService {
     const result = await this.generateObjectives(questId, hero, actor);
     const objectives = result.objectives;
 
-    let title = 'Tarefa desconhecida';
-    let description = 'Descrição desconhecida'
-
-    if (result.tags.has('assault') && result.tags.has('assassination')) {
-      title = `O Extermínio Exigido por ${actor.name}`;
-      description = `O ${roleTranslator[actor.role]} declarou guerra aberta. Lidere um ataque massivo ao alvo e garanta que não haja sobreviventes no comando.`;
-    };
-    if (result.tags.has('stealth') && result.tags.has('valuable')) {
-      title = `O Roubo Silencioso de ${actor.name}`;
-      description = `Esta operação não pode deixar rastros. Infiltre-se no local designado e recupere o alvo sem alertar os guardas.`;
-    };
+    let narrative = await this.synthetizeNarrative(result.tags, actor.name, hero.region.name);
 
     const gold = actor.level * 15;
     const xp = actor.level * 25;
@@ -156,8 +174,8 @@ export class QuestsService {
     await this.prisma.quest.create({
       data: {
         id: questId,
-        title: title,
-        description: description,
+        title: narrative.title,
+        description: narrative.description,
         actorId: actor.id,
         objectives: {
           create: objectives.map((obj) => ({
@@ -177,8 +195,8 @@ export class QuestsService {
 
     const quest = {
       id: questId,
-      title: title,
-      description: description,
+      title: narrative.title,
+      description: narrative.description,
       actorId: actor.id,
       objectives: objectives,
       goldReward: gold,

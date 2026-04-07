@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { Actor, ActionType, Target, TargetCategory } from '@prisma/client';
-import { friendlyTemplates, hostileTemplates } from './data/narratives.data';
 import {
   actionTranslator,
   categoryArticle,
@@ -24,19 +23,6 @@ export class QuestsFormatter {
     return template
       .replace('{name}', actor.name)
       .replace('{role}', roleTranslator[actor.role]);
-  }
-
-  generateNarrative(actor: Actor): string[] {
-    const templates = actor.hostility ? hostileTemplates : friendlyTemplates;
-
-    const rawTitle       = this.pickRandom(templates.titles);
-    const rawDescription = this.pickRandom(templates.descriptions);
-
-    const title       = this.interpolate(rawTitle, actor);
-    const description = `${roleTranslator[actor.role]} ${actor.name} ${rawDescription}`;
-
-    if (!title || !description) throw new Error('Falha ao criar narrativa.');
-    return [title, description];
   }
 
   formatObjectiveDescription(action: ActionType, quantity: number, target: Target): string {
