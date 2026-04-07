@@ -1,3 +1,3 @@
 export class GenerateQuestDto {
-  heroId: string;
+  heroId: string = '';
 }

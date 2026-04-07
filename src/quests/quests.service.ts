@@ -1,5 +1,5 @@
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
-import { PrismaService } from 'src/prisma/prisma.service';
+import { PrismaService } from '@/prisma/prisma.service';
 import { Actor, Hero, ActionType, QuestStatus, Target, TargetCategory, HeroClass } from '@prisma/client';
 import { ObjectiveDto, QuestDto } from './dto/quest-response.dto';
 import { GenerateQuestDto } from './dto/generate-quest.dto';
@@ -188,14 +188,21 @@ export class QuestsService {
     return quest;
   };
 
-  async findAll(): Promise<QuestDto[]> {
+  async findAll(page: string, limit: string, status?: QuestStatus, regionId?: string): Promise<QuestDto[]> {
     const rawQuests = await this.prisma.quest.findMany({
+      take: Number(limit),
+      skip: (Number(page) - 1) * Number(limit),
+      where: {
+        ...(status && { status }),    // só adiciona o filtro se a variável existir
+        ...(regionId && { regionId })
+      },
+      orderBy: { id: 'desc' },   // retorna os mais recentes primeiro
       include: {
         actor: true,
         objectives: {
           include: { target: true }
-        }
-      },
+        },
+      }
     });
 
     const completeQuests: QuestDto[] = rawQuests.map((quest) => ({

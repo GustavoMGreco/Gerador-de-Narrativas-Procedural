@@ -1,7 +1,8 @@
-import { Body, Controller, Get, Param, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Patch, Post, Query } from '@nestjs/common';
 import { QuestsService } from './quests.service';
 import { GenerateQuestDto } from './dto/generate-quest.dto';
 import { generate } from 'rxjs';
+import { QuestStatus } from '@prisma/client';
 
 @Controller('quests')
 export class QuestsController {
@@ -9,8 +10,18 @@ export class QuestsController {
   // agora eu posso usar this.questsService em qualquer lugar aqui dentro
 
   @Get()
-  public getQuest() {
-    return this.questsService.findAll();
+  public getQuest(
+      @Query('page') page?: string, 
+      @Query('limit') limit?: string,
+      @Query('status') status?: QuestStatus,
+      @Query('regionId') regionId?: string) {
+    if (!page) {
+      page = '1';
+    };
+    if (!limit) {
+      limit = '10';
+    }
+    return this.questsService.findAll(page, limit, status, regionId);
   }
 
   @Post('generate')

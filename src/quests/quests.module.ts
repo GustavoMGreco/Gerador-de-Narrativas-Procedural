@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
 import { QuestsController } from './quests.controller';
 import { QuestsService } from './quests.service';
-import { PrismaModule } from 'src/prisma/prisma.module';
+import { PrismaModule } from '@/prisma/prisma.module';
 import { QuestsFormatter } from './quests.formatter';
-import { PrismaService } from 'src/prisma/prisma.service';
+import { PrismaService } from '@/prisma/prisma.service';
 
 @Module({
   imports: [PrismaModule],

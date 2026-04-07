@@ -80,6 +80,6 @@
     "testEnvironment": "node"
   },
   "overrides": {
-  "@types/pg": "8.11.10" 
+    "@types/pg": "8.11.10"
   }
 }
