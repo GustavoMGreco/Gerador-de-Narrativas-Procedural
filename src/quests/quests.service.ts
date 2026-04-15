@@ -39,11 +39,12 @@ export class QuestsService {
     return actor;
   };
 
-  private async findValidTarget(action: ActionType, heroLevel: number): Promise<Target> {
+  private async findValidTarget(action: ActionType, heroLevel: number, currentTags: Set<string>): Promise<Target> {
   const node = questGraph[action];
   const allowedCategories = node?.allowedTargets || [TargetCategory.Monster];
+  const tagsArray = Array.from(currentTags);
 
-  const targetFilter = {
+  const basetFilter = {
     category: { in: allowedCategories },
     level: {
       gte: Math.max(1, heroLevel - 5),
@@ -51,16 +52,33 @@ export class QuestsService {
     }
   };
 
-  const count = await this.prisma.target.count({ where: targetFilter });
+  // monta o filtro combinando a base com a restrição de tags
+  const targetFilter: any = { ...basetFilter };
+
+  if (tagsArray.length > 0) {
+    targetFilter.tags = {
+      hasSome: tagsArray  // o prisma busca alvos que tenham pelo menos uma das tags do roteiro
+    };
+  };
+
+  let count = await this.prisma.target.count({ where: targetFilter });
+
+  if (count === 0 && tagsArray.length > 0) {
+    count = await this.prisma.target.count({ where: basetFilter });
+  };
+
+  if (count > 0) {
+    delete targetFilter.tags;
+  }
 
   if (count === 0) {
-     // fallback de segurança: se não achar um alvo perfeito, pega qualquer um da categoria
-     const fallback = await this.prisma.target.findFirst({
-        where: { category: { in: allowedCategories } }
-     });
-     if(fallback) return fallback;
+    // fallback: se não achar um alvo perfeito, pega qualquer um da categoria
+    const fallback = await this.prisma.target.findFirst({
+      where: { category: { in: allowedCategories } }
+    });
+    if(fallback) return fallback;
      
-     throw new Error(`Nenhum alvo encontrado para a ação ${action}.`);
+    throw new Error(`Nenhum alvo encontrado para a ação ${action}.`);
   };
 
   const randomIndex = Math.floor(Math.random() * count);
@@ -102,8 +120,8 @@ private getEntryAction(heroClass: HeroClass): ActionType {
     return possibleEntries[Math.floor(Math.random() * possibleEntries.length)];
   }
 
-  private async createSingleObjective(action: ActionType, heroLevel: number, questId: string): Promise<ObjectiveDto> {
-    const target = await this.findValidTarget(action, heroLevel);
+  private async createSingleObjective(action: ActionType, heroLevel: number, questId: string, currentTags: Set<string>): Promise<ObjectiveDto> {
+    const target = await this.findValidTarget(action, heroLevel, currentTags);
 
     let quantity = 1; 
 
@@ -142,7 +160,7 @@ private getEntryAction(heroClass: HeroClass): ActionType {
       context.actionHistory.push(currentAction);
       node.narrativeTags.forEach(tag => context.tags.add(tag));
       
-      objectives.push(await this.createSingleObjective(currentAction, hero.level, questId));
+      objectives.push(await this.createSingleObjective(currentAction, hero.level, questId, context.tags));
 
       let next = selectNextAction(node, context);
       if (!next) break;

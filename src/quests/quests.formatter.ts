@@ -15,26 +15,17 @@ import {
 @Injectable()
 export class QuestsFormatter {
 
-  private pickRandom<T>(arr: T[]): T {
-    return arr[Math.floor(Math.random() * arr.length)];
-  }
-
-  private interpolate(template: string, actor: Actor): string {
-    return template
-      .replace('{name}', actor.name)
-      .replace('{role}', roleTranslator[actor.role]);
-  }
-
   formatObjectiveDescription(action: ActionType, quantity: number, target: Target): string {
     const verb =
       narrativeOverrides[action]?.[target.category] ??
       actionTranslator[action];
 
-    if (target.category === TargetCategory.Location) {
-      const template = locationTemplates[action];
-      if (template) return template(target.name);
-      const prep = actionPrepositions[action] ?? 'em';
-      return `${verb} ${prep} ${target.name}`;
+      if (target.category === TargetCategory.Location) {
+        const template = locationTemplates[action];
+        if (template) return template(target.name);
+        const prep = actionPrepositions[action] ?? 'em';
+
+        return `${verb} ${prep} ${target.name}`;
     }
 
     const isCountableTarget =

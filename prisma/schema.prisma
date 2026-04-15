@@ -101,6 +101,7 @@ model Target {
   category   TargetCategory
   level      Int
   objectives Objective[]
+  tags       String[]
 
   @@map("targets")
 }
@@ -115,7 +116,7 @@ model Hero {
   reputation Int       @default(0)
   quests     Quest[]
   region     Region    @relation(fields: [regionId], references: [id])
-  regionId  String    @map("region_id")
+  regionId   String    @map("region_id")
 
   @@map("heroes")
 }
@@ -164,11 +165,11 @@ model Quest {
 }
 
 model Region {
-  id          String   @id @default(uuid())
+  id          String  @id @default(uuid())
   name        String
   description String
-  minLevel    Int      @map("min_level")
-  maxLevel    Int      @map("max_level")
+  minLevel    Int     @map("min_level")
+  maxLevel    Int     @map("max_level")
   heroes      Hero[]
   actors      Actor[]
   quests      Quest[]

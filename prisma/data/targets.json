@@ -2,1061 +2,1273 @@
   {
     "name": "Goblin Saqueador",
     "category": "Monster",
-    "level": 1
+    "level": 1,
+    "tags": ["crime", "war"]
   },
   {
     "name": "Dragão de Obsidiana",
     "category": "Monster",
-    "level": 50
+    "level": 50,
+    "tags": ["survival", "magic", "war"]
   },
   {
     "name": "Lobo das Trevas",
     "category": "Monster",
-    "level": 4
+    "level": 4,
+    "tags": ["survival", "stealth"]
   },
   {
     "name": "Troll da Ponte Podre",
     "category": "Monster",
-    "level": 14
+    "level": 14,
+    "tags": ["survival", "gore"]
   },
   {
     "name": "Espectro do Cemitério",
     "category": "Monster",
-    "level": 18
+    "level": 18,
+    "tags": ["undead", "corruption", "faith"]
   },
   {
     "name": "Hidra do Pântano Cinzento",
     "category": "Monster",
-    "level": 32
+    "level": 32,
+    "tags": ["survival", "gore"]
   },
   {
     "name": "Lich Soberano",
     "category": "Monster",
-    "level": 47
+    "level": 47,
+    "tags": ["undead", "magic", "forbidden_knowledge"]
   },
   {
     "name": "Basilisco de Pedra",
     "category": "Monster",
-    "level": 28
+    "level": 28,
+    "tags": ["survival", "magic"]
   },
   {
     "name": "Quimera Corrompida",
     "category": "Monster",
-    "level": 38
+    "level": 38,
+    "tags": ["corruption", "magic", "gore"]
   },
   {
     "name": "Enxame de Ratos Infestados",
     "category": "Monster",
-    "level": 3
+    "level": 3,
+    "tags": ["corruption", "survival", "cleansing"]
   },
   {
     "name": "Vampiro Nobre",
     "category": "Monster",
-    "level": 35
+    "level": 35,
+    "tags": ["undead", "crime", "betrayal"]
   },
   {
     "name": "Golem de Cinzas",
     "category": "Monster",
-    "level": 22
+    "level": 22,
+    "tags": ["magic", "war"]
   },
   {
     "name": "Wyvern Sombria",
     "category": "Monster",
-    "level": 40
+    "level": 40,
+    "tags": ["stealth", "survival"]
   },
   {
     "name": "Banshee da Torre Esquecida",
     "category": "Monster",
-    "level": 24
+    "level": 24,
+    "tags": ["undead", "magic", "investigation"]
   },
   {
     "name": "Manticora Faminta",
     "category": "Monster",
-    "level": 30
+    "level": 30,
+    "tags": ["survival", "gore"]
   },
   {
     "name": "Kobold Xamã",
     "category": "Monster",
-    "level": 7
+    "level": 7,
+    "tags": ["ritual", "magic"]
   },
   {
     "name": "Erva de Sangue Rara",
     "category": "Item",
-    "level": 1
+    "level": 1,
+    "tags": ["trade", "valuable", "ritual"]
   },
   {
     "name": "Cálice do Rei Louco",
     "category": "Item",
-    "level": 25
+    "level": 25,
+    "tags": ["valuable", "corruption", "holy"]
   },
   {
     "name": "Espada da Maré Sangrenta",
     "category": "Item",
-    "level": 30
+    "level": 30,
+    "tags": ["war", "valuable", "gore"]
   },
   {
     "name": "Mapa do Covil Perdido",
     "category": "Item",
-    "level": 5
+    "level": 5,
+    "tags": ["investigation", "valuable", "trade"]
   },
   {
     "name": "Amuleto da Alma Presa",
     "category": "Item",
-    "level": 20
+    "level": 20,
+    "tags": ["magic", "containment", "forbidden_knowledge"]
   },
   {
     "name": "Veneno de Sombra Concentrado",
     "category": "Item",
-    "level": 15
+    "level": 15,
+    "tags": ["assassination", "stealth", "crime"]
   },
   {
     "name": "Coração Petrificado de Wyvern",
     "category": "Item",
-    "level": 38
+    "level": 38,
+    "tags": ["valuable", "magic", "trade"]
   },
   {
     "name": "Chave de Osso Maldita",
     "category": "Item",
-    "level": 12
+    "level": 12,
+    "tags": ["undead", "corruption", "stealth"]
   },
   {
     "name": "Cristal de Visão Dupla",
     "category": "Item",
-    "level": 22
+    "level": 22,
+    "tags": ["magic", "investigation", "stealth"]
   },
   {
     "name": "Moeda do Pacto Infernal",
     "category": "Item",
-    "level": 35
+    "level": 35,
+    "tags": ["trade", "summoning", "betrayal"]
   },
   {
     "name": "Príncipe Herdeiro",
     "category": "Person",
-    "level": 15
+    "level": 15,
+    "tags": ["diplomacy", "protection", "blackmail"]
   },
   {
     "name": "Mendigo que Viu Tudo",
     "category": "Person",
-    "level": 2
+    "level": 2,
+    "tags": ["investigation", "stealth", "protection"]
   },
   {
     "name": "Capitã da Guarda Corrupta",
     "category": "Person",
-    "level": 20
+    "level": 20,
+    "tags": ["corruption", "war", "betrayal"]
   },
   {
     "name": "Viúva do Senhor Traído",
     "category": "Person",
-    "level": 11
+    "level": 11,
+    "tags": ["investigation", "betrayal", "diplomacy"]
   },
   {
     "name": "Espião da Corte Inimiga",
     "category": "Person",
-    "level": 17
+    "level": 17,
+    "tags": ["stealth", "war", "sabotage"]
   },
   {
     "name": "Criança com Memória Maldita",
     "category": "Person",
-    "level": 6
+    "level": 6,
+    "tags": ["magic", "investigation", "protection"]
   },
   {
     "name": "General Desertor Exilado",
     "category": "Person",
-    "level": 28
+    "level": 28,
+    "tags": ["war", "betrayal", "survival"]
   },
   {
     "name": "Sacerdotisa Apóstata",
     "category": "Person",
-    "level": 22
+    "level": 22,
+    "tags": ["faith", "corruption", "forbidden_knowledge"]
   },
   {
     "name": "Herdeiro Ilegítimo do Trono",
     "category": "Person",
-    "level": 19
+    "level": 19,
+    "tags": ["diplomacy", "protection", "blackmail"]
   },
   {
     "name": "Comerciante com Dívida de Sangue",
     "category": "Person",
-    "level": 13
+    "level": 13,
+    "tags": ["trade", "crime", "duel"]
   },
   {
     "name": "Assassino Aposentado",
     "category": "Person",
-    "level": 24
+    "level": 24,
+    "tags": ["assassination", "stealth", "crime"]
   },
   {
     "name": "Acampamento dos Bandidos",
     "category": "Location",
-    "level": 5
+    "level": 5,
+    "tags": ["crime", "assault", "cleansing"]
   },
   {
     "name": "Ruínas do Templo Submerso",
     "category": "Location",
-    "level": 25
+    "level": 25,
+    "tags": ["investigation", "holy", "survival"]
   },
   {
     "name": "Taverna do Último Respiro",
     "category": "Location",
-    "level": 4
+    "level": 4,
+    "tags": ["trade", "crime", "diplomacy"]
   },
   {
     "name": "Mina Abandonada de Prata Negra",
     "category": "Location",
-    "level": 18
+    "level": 18,
+    "tags": ["survival", "valuable", "corruption"]
   },
   {
     "name": "Floresta dos Sussurros Eternos",
     "category": "Location",
-    "level": 22
+    "level": 22,
+    "tags": ["magic", "survival", "stealth"]
   },
   {
     "name": "Torre do Arquimago Morto",
     "category": "Location",
-    "level": 35
+    "level": 35,
+    "tags": ["magic", "undead", "forbidden_knowledge"]
   },
   {
     "name": "Catacumbas Reais Profanadas",
     "category": "Location",
-    "level": 30
+    "level": 30,
+    "tags": ["undead", "holy", "corruption"]
   },
   {
     "name": "Vilarejo Fantasma de Edenmoor",
     "category": "Location",
-    "level": 15
+    "level": 15,
+    "tags": ["investigation", "undead", "survival"]
   },
   {
     "name": "Fortaleza Sitiada de Ironhold",
     "category": "Location",
-    "level": 28
+    "level": 28,
+    "tags": ["war", "assault", "protection"]
   },
   {
     "name": "Porto dos Contrabandistas",
     "category": "Location",
-    "level": 10
+    "level": 10,
+    "tags": ["crime", "trade", "stealth"]
   },
   {
     "name": "Abismo da Queda Silenciosa",
     "category": "Location",
-    "level": 42
+    "level": 42,
+    "tags": ["survival", "magic", "containment"]
   },
   {
     "name": "Mercado Negro Subterrâneo",
     "category": "Location",
-    "level": 16
+    "level": 16,
+    "tags": ["trade", "crime", "forbidden_knowledge"]
   },
   {
     "name": "Santuário Corrompido da Lua",
     "category": "Location",
-    "level": 20
+    "level": 20,
+    "tags": ["holy", "corruption", "cleansing"]
   },
   {
     "name": "Grimório Proibido",
     "category": "Mage",
-    "level": 10
+    "level": 10,
+    "tags": ["forbidden_knowledge", "magic", "stealth"]
   },
   {
     "name": "Tomo das Profecias Invertidas",
     "category": "Mage",
-    "level": 38
+    "level": 38,
+    "tags": ["magic", "forbidden_knowledge", "faith"]
   },
   {
     "name": "Laboratório de Transmutação Proibida",
     "category": "Mage",
-    "level": 30
+    "level": 30,
+    "tags": ["magic", "forbidden_knowledge", "gore"]
   },
   {
     "name": "Aprendiz Corrompido pelo Vazio",
     "category": "Mage",
-    "level": 14
+    "level": 14,
+    "tags": ["magic", "corruption", "containment"]
   },
   {
     "name": "Sigilo do Portal Instável",
     "category": "Mage",
-    "level": 22
+    "level": 22,
+    "tags": ["magic", "summoning", "containment"]
   },
   {
     "name": "Familiar Demoníaco Ligado",
     "category": "Mage",
-    "level": 18
+    "level": 18,
+    "tags": ["summoning", "magic", "corruption"]
   },
   {
     "name": "Nexo de Energia Arcana Descontrolada",
     "category": "Mage",
-    "level": 45
+    "level": 45,
+    "tags": ["magic", "survival", "containment"]
   },
   {
     "name": "Artefato de Supressão Mágica",
     "category": "Mage",
-    "level": 26
+    "level": 26,
+    "tags": ["magic", "sabotage", "protection"]
   },
   {
     "name": "Mago Renegado da Torre Negra",
     "category": "Mage",
-    "level": 34
+    "level": 34,
+    "tags": ["magic", "betrayal", "assassination"]
   },
   {
     "name": "Ritual de Invocação Incompleto",
     "category": "Mage",
-    "level": 20
+    "level": 20,
+    "tags": ["ritual", "summoning", "magic"]
   },
   {
     "name": "Cristal de Memória Arcana Selada",
     "category": "Mage",
-    "level": 16
+    "level": 16,
+    "tags": ["magic", "investigation", "valuable"]
   },
   {
     "name": "Líder Mercenário",
     "category": "Warrior",
-    "level": 12
+    "level": 12,
+    "tags": ["war", "trade", "assault"]
   },
   {
     "name": "Arena de Sangue Clandestina",
     "category": "Warrior",
-    "level": 20
+    "level": 20,
+    "tags": ["duel", "crime", "gore"]
   },
   {
     "name": "Campeão Invicto da Guilda de Ferro",
     "category": "Warrior",
-    "level": 40
+    "level": 40,
+    "tags": ["duel", "war", "protection"]
   },
   {
     "name": "Armadura Amaldiçoada do Conquistador",
     "category": "Warrior",
-    "level": 35
+    "level": 35,
+    "tags": ["war", "corruption", "valuable"]
   },
   {
     "name": "Desertor com Segredos Militares",
     "category": "Warrior",
-    "level": 16
+    "level": 16,
+    "tags": ["war", "betrayal", "blackmail"]
   },
   {
     "name": "Comandante da Legião das Sombras",
     "category": "Warrior",
-    "level": 44
+    "level": 44,
+    "tags": ["war", "stealth", "assault"]
   },
   {
     "name": "Relíquia de Guerra do Rei Caído",
     "category": "Warrior",
-    "level": 28
+    "level": 28,
+    "tags": ["war", "valuable", "holy"]
   },
   {
     "name": "Recruta Fanático da Ordem de Ferro",
     "category": "Warrior",
-    "level": 8
+    "level": 8,
+    "tags": ["war", "faith", "duel"]
   },
   {
     "name": "Estratégia de Cerco Roubada",
     "category": "Warrior",
-    "level": 22
+    "level": 22,
+    "tags": ["war", "stealth", "sabotage"]
   },
   {
     "name": "Veterano Traumatizado com Informações",
     "category": "Warrior",
-    "level": 18
+    "level": 18,
+    "tags": ["investigation", "war", "survival"]
   },
   {
     "name": "Torneio Armadilha do Senhor da Guerra",
     "category": "Warrior",
-    "level": 30
+    "level": 30,
+    "tags": ["duel", "betrayal", "assassination"]
   },
   {
     "name": "Cofre da Guilda",
     "category": "Rogue",
-    "level": 8
+    "level": 8,
+    "tags": ["stealth", "crime", "valuable"]
   },
   {
     "name": "Rede de Informantes da Cidade Baixa",
     "category": "Rogue",
-    "level": 22
+    "level": 22,
+    "tags": ["diplomacy", "crime", "investigation"]
   },
   {
     "name": "Falsificador Mestre de Selos Reais",
     "category": "Rogue",
-    "level": 28
+    "level": 28,
+    "tags": ["forgery", "crime", "diplomacy"]
   },
   {
     "name": "Esconderijo do Bando das Sombras",
     "category": "Rogue",
-    "level": 15
+    "level": 15,
+    "tags": ["stealth", "crime", "assault"]
   },
   {
     "name": "Lista de Contratos de Assassinato",
     "category": "Rogue",
-    "level": 32
+    "level": 32,
+    "tags": ["assassination", "investigation", "blackmail"]
   },
   {
     "name": "Tesouro Escondido do Ladrão Lendário",
     "category": "Rogue",
-    "level": 40
+    "level": 40,
+    "tags": ["stealth", "valuable", "investigation"]
   },
   {
     "name": "Veneno Raro de Origem Desconhecida",
     "category": "Rogue",
-    "level": 18
+    "level": 18,
+    "tags": ["assassination", "crime", "valuable"]
   },
   {
     "name": "Identidade do Mestre da Guilda das Sombras",
     "category": "Rogue",
-    "level": 45
+    "level": 45,
+    "tags": ["investigation", "blackmail", "crime"]
   },
   {
     "name": "Passagem Secreta sob o Palácio",
     "category": "Rogue",
-    "level": 12
+    "level": 12,
+    "tags": ["stealth", "sabotage", "diplomacy"]
   },
   {
     "name": "Agente Duplo Infiltrado na Guarda",
     "category": "Rogue",
-    "level": 24
+    "level": 24,
+    "tags": ["stealth", "betrayal", "war"]
   },
   {
     "name": "Arquivo de Chantagem da Nobreza",
     "category": "Rogue",
-    "level": 36
+    "level": 36,
+    "tags": ["blackmail", "diplomacy", "crime"]
   },
   {
     "name": "Altar Profanado",
     "category": "Cleric",
-    "level": 10
+    "level": 10,
+    "tags": ["holy", "corruption", "cleansing"]
   },
   {
     "name": "Ossuário Profanado por Cultistas",
     "category": "Cleric",
-    "level": 18
+    "level": 18,
+    "tags": ["undead", "corruption", "cleansing"]
   },
   {
     "name": "Relíquia Sagrada Roubada",
     "category": "Cleric",
-    "level": 24
+    "level": 24,
+    "tags": ["holy", "crime", "valuable"]
   },
   {
     "name": "Sacerdote Possuído pelo Demônio",
     "category": "Cleric",
-    "level": 28
+    "level": 28,
+    "tags": ["faith", "exorcism", "containment"]
   },
   {
     "name": "Grimório de Necromancia Herética",
     "category": "Cleric",
-    "level": 32
+    "level": 32,
+    "tags": ["undead", "forbidden_knowledge", "magic"]
   },
   {
     "name": "Sino Maldito que Ressuscita Mortos",
     "category": "Cleric",
-    "level": 38
+    "level": 38,
+    "tags": ["undead", "magic", "summoning"]
   },
   {
     "name": "Cultista Líder do Credo do Fim",
     "category": "Cleric",
-    "level": 42
+    "level": 42,
+    "tags": ["ritual", "corruption", "faith"]
   },
   {
     "name": "Fonte Sagrada Envenenada",
     "category": "Cleric",
-    "level": 14
+    "level": 14,
+    "tags": ["holy", "sabotage", "cleansing"]
   },
   {
     "name": "Criança Marcada por Profecia Sombria",
     "category": "Cleric",
-    "level": 10
+    "level": 10,
+    "tags": ["faith", "protection", "magic"]
   },
   {
     "name": "Portal para o Reino dos Mortos Aberto",
     "category": "Cleric",
-    "level": 48
+    "level": 48,
+    "tags": ["undead", "summoning", "containment"]
   },
   {
     "name": "Confessor com Segredo que Abala a Fé",
     "category": "Cleric",
-    "level": 20
+    "level": 20,
+    "tags": ["faith", "blackmail", "investigation"]
   },
   {
     "name": "Gnoll Caçador de Crânios",
     "category": "Monster",
-    "level": 11
+    "level": 11,
+    "tags": ["survival", "war"]
   },
   {
     "name": "Elemental de Lama Corrompida",
     "category": "Monster",
-    "level": 20
+    "level": 20,
+    "tags": ["magic", "corruption"]
   },
   {
     "name": "Caranguejo Gigante das Ruínas",
     "category": "Monster",
-    "level": 6
+    "level": 6,
+    "tags": ["survival"]
   },
   {
     "name": "Sombra Vinculada ao Espelho",
     "category": "Monster",
-    "level": 27
+    "level": 27,
+    "tags": ["stealth", "magic"]
   },
   {
     "name": "Haste do Estandarte Caído",
     "category": "Item",
-    "level": 9
+    "level": 9,
+    "tags": ["war", "valuable"]
   },
   {
     "name": "Máscara do Inquisidor Morto",
     "category": "Item",
-    "level": 33
+    "level": 33,
+    "tags": ["holy", "investigation"]
   },
   {
     "name": "Rato Gigante do Celeiro",
     "category": "Monster",
-    "level": 1
+    "level": 1,
+    "tags": ["survival", "corruption"]
   },
   {
     "name": "Corvo Agoirento",
     "category": "Monster",
-    "level": 2
+    "level": 2,
+    "tags": ["stealth", "magic"]
   },
   {
     "name": "Fungo Venenoso da Floresta",
     "category": "Item",
-    "level": 2
+    "level": 2,
+    "tags": ["assassination", "survival"]
   },
   {
     "name": "Amuleto Enferrujado sem Dono",
     "category": "Item",
-    "level": 3
+    "level": 3,
+    "tags": ["magic"]
   },
   {
     "name": "Órfão que Viu o Massacre",
     "category": "Person",
-    "level": 2
+    "level": 2,
+    "tags": ["investigation", "protection"]
   },
   {
     "name": "Fazendeiro Desaparecido",
     "category": "Person",
-    "level": 3
+    "level": 3,
+    "tags": ["investigation", "survival"]
   },
   {
     "name": "Cemitério de Animais Corrompido",
     "category": "Location",
-    "level": 4
+    "level": 4,
+    "tags": ["undead", "corruption"]
   },
   {
     "name": "Pergaminho Iniciático Rasgado",
     "category": "Mage",
-    "level": 3
+    "level": 3,
+    "tags": ["forbidden_knowledge", "magic"]
   },
   {
     "name": "Espada Quebrada de Milícia",
     "category": "Warrior",
-    "level": 4
+    "level": 4,
+    "tags": ["war"]
   },
   {
     "name": "Bolsa de Moedas Roubada",
     "category": "Rogue",
-    "level": 3
+    "level": 3,
+    "tags": ["crime", "valuable"]
   },
   {
     "name": "Ícone Sagrado Enterrado",
     "category": "Cleric",
-    "level": 4
+    "level": 4,
+    "tags": ["holy", "valuable"]
   },
   {
     "name": "Sapo Mutante das Águas Negras",
     "category": "Monster",
-    "level": 6
+    "level": 6,
+    "tags": ["survival", "corruption"]
   },
   {
     "name": "Zumbi do Pântano",
     "category": "Monster",
-    "level": 8
+    "level": 8,
+    "tags": ["undead", "survival"]
   },
   {
     "name": "Serpente de Duas Cabeças",
     "category": "Monster",
-    "level": 11
+    "level": 11,
+    "tags": ["survival", "gore"]
   },
   {
     "name": "Bruxa da Lama Encantada",
     "category": "Monster",
-    "level": 13
+    "level": 13,
+    "tags": ["magic", "ritual"]
   },
   {
     "name": "Erva Paralítica do Charco",
     "category": "Item",
-    "level": 7
+    "level": 7,
+    "tags": ["assassination", "crime"]
   },
   {
     "name": "Bússola que Aponta para o Mal",
     "category": "Item",
-    "level": 10
+    "level": 10,
+    "tags": ["magic", "corruption"]
   },
   {
     "name": "Olho Conservado em Âmbar Negro",
     "category": "Item",
-    "level": 13
+    "level": 13,
+    "tags": ["magic", "investigation"]
   },
   {
     "name": "Pescador que Viu a Criatura",
     "category": "Person",
-    "level": 7
+    "level": 7,
+    "tags": ["investigation"]
   },
   {
     "name": "Soldado Infectado pela Lama",
     "category": "Person",
-    "level": 9
+    "level": 9,
+    "tags": ["corruption", "war"]
   },
   {
     "name": "Contrabandista Preso na Fortaleza",
     "category": "Person",
-    "level": 12
+    "level": 12,
+    "tags": ["crime", "trade"]
   },
   {
     "name": "Ponte Podre sobre o Abismo Verde",
     "category": "Location",
-    "level": 8
+    "level": 8,
+    "tags": ["survival", "stealth"]
   },
   {
     "name": "Laboratório de Venenos Abandonado",
     "category": "Location",
-    "level": 11
+    "level": 11,
+    "tags": ["forbidden_knowledge", "crime"]
   },
   {
     "name": "Toca do Caçador de Recompensas",
     "category": "Location",
-    "level": 14
+    "level": 14,
+    "tags": ["crime", "assassination"]
   },
   {
     "name": "Tábua de Runas Parcialmente Decifrada",
     "category": "Mage",
-    "level": 9
+    "level": 9,
+    "tags": ["magic", "forbidden_knowledge"]
   },
   {
     "name": "Escudo da Milícia Traída",
     "category": "Warrior",
-    "level": 10
+    "level": 10,
+    "tags": ["war", "betrayal"]
   },
   {
     "name": "Diário Cifrado do Informante",
     "category": "Rogue",
-    "level": 11
+    "level": 11,
+    "tags": ["investigation", "blackmail"]
   },
   {
     "name": "Sino Funerário Enterrado Vivo",
     "category": "Cleric",
-    "level": 12
+    "level": 12,
+    "tags": ["undead", "holy"]
   },
   {
     "name": "Escorpião Colossal das Dunas",
     "category": "Monster",
-    "level": 16
+    "level": 16,
+    "tags": ["survival"]
   },
   {
     "name": "Múmia do Faraó Esquecido",
     "category": "Monster",
-    "level": 20
+    "level": 20,
+    "tags": ["undead", "magic"]
   },
   {
     "name": "Djinn Aprisionado Iracundo",
     "category": "Monster",
-    "level": 23
+    "level": 23,
+    "tags": ["summoning", "magic"]
   },
   {
     "name": "Areia que Engole Vivos",
     "category": "Location",
-    "level": 17
+    "level": 17,
+    "tags": ["survival", "containment"]
   },
   {
     "name": "Oásis Envenenado pelos Sábios",
     "category": "Location",
-    "level": 19
+    "level": 19,
+    "tags": ["corruption", "survival"]
   },
   {
     "name": "Templo Soterrado da Serpente Solar",
     "category": "Location",
-    "level": 22
+    "level": 22,
+    "tags": ["holy", "survival"]
   },
   {
     "name": "Caravana Fantasma de Mercadores",
     "category": "Location",
-    "level": 24
+    "level": 24,
+    "tags": ["undead", "trade"]
   },
   {
     "name": "Arma de Obsidiana Solar",
     "category": "Item",
-    "level": 17
+    "level": 17,
+    "tags": ["war", "valuable"]
   },
   {
     "name": "Tinta de Sangue para Runas",
     "category": "Item",
-    "level": 19
+    "level": 19,
+    "tags": ["ritual", "magic"]
   },
   {
     "name": "Mapa do Aqueduto Perdido",
     "category": "Item",
-    "level": 23
+    "level": 23,
+    "tags": ["investigation", "valuable"]
   },
   {
     "name": "Nômade com Rota Secreta",
     "category": "Person",
-    "level": 16
+    "level": 16,
+    "tags": ["stealth", "survival"]
   },
   {
     "name": "Sacerdotisa do Sol Corrompida",
     "category": "Person",
-    "level": 18
+    "level": 18,
+    "tags": ["faith", "corruption"]
   },
   {
     "name": "Escrava Fugitiva com Tatuagem Arcana",
     "category": "Person",
-    "level": 21
+    "level": 21,
+    "tags": ["magic", "protection"]
   },
   {
     "name": "Traficante de Relíquias Proibidas",
     "category": "Person",
-    "level": 24
+    "level": 24,
+    "tags": ["trade", "crime"]
   },
   {
     "name": "Grimório das Areias Vivas",
     "category": "Mage",
-    "level": 17
+    "level": 17,
+    "tags": ["magic", "forbidden_knowledge"]
   },
   {
     "name": "Espelho de Ilusão do Deserto",
     "category": "Mage",
-    "level": 21
+    "level": 21,
+    "tags": ["magic", "stealth"]
   },
   {
     "name": "Capitão do Exército das Dunas",
     "category": "Warrior",
-    "level": 18
+    "level": 18,
+    "tags": ["war"]
   },
   {
     "name": "Fortaleza de Areia Encantada",
     "category": "Warrior",
-    "level": 24
+    "level": 24,
+    "tags": ["war", "magic"]
   },
   {
     "name": "Impressão Digital em Pergaminho Real",
     "category": "Rogue",
-    "level": 16
+    "level": 16,
+    "tags": ["forgery", "investigation"]
   },
   {
     "name": "Rota de Contrabando pelo Deserto",
     "category": "Rogue",
-    "level": 22
+    "level": 22,
+    "tags": ["trade", "stealth"]
   },
   {
     "name": "Altar de Sacrifício ao Sol Negro",
     "category": "Cleric",
-    "level": 19
+    "level": 19,
+    "tags": ["ritual", "holy"]
   },
   {
     "name": "Ossada do Clérigo Herético",
     "category": "Cleric",
-    "level": 25
+    "level": 25,
+    "tags": ["undead", "faith"]
   },
   {
     "name": "Urso das Neves Amaldiçoado",
     "category": "Monster",
-    "level": 26
+    "level": 26,
+    "tags": ["survival", "corruption"]
   },
   {
     "name": "Elemental de Gelo Corrompido",
     "category": "Monster",
-    "level": 29
+    "level": 29,
+    "tags": ["magic", "corruption"]
   },
   {
     "name": "Gigante das Montanhas Cego",
     "category": "Monster",
-    "level": 32
+    "level": 32,
+    "tags": ["survival", "war"]
   },
   {
     "name": "Harpia da Tempestade Eterna",
     "category": "Monster",
-    "level": 34
+    "level": 34,
+    "tags": ["survival"]
   },
   {
     "name": "Caverna de Cristal Instável",
     "category": "Location",
-    "level": 27
+    "level": 27,
+    "tags": ["survival", "magic"]
   },
   {
     "name": "Monastério Abandonado nas Alturas",
     "category": "Location",
-    "level": 30
+    "level": 30,
+    "tags": ["holy", "survival"]
   },
   {
     "name": "Passagem Gelada dos Exilados",
     "category": "Location",
-    "level": 33
+    "level": 33,
+    "tags": ["stealth", "survival"]
   },
   {
     "name": "Pedra Rúnica Gravada em Gelo",
     "category": "Item",
-    "level": 26
+    "level": 26,
+    "tags": ["magic"]
   },
   {
     "name": "Coração de Elemental Congelado",
     "category": "Item",
-    "level": 30
+    "level": 30,
+    "tags": ["magic", "valuable"]
   },
   {
     "name": "Capa do Montanhês Desaparecido",
     "category": "Item",
-    "level": 33
+    "level": 33,
+    "tags": ["investigation", "survival"]
   },
   {
     "name": "Ermitão com Memória dos Antigos",
     "category": "Person",
-    "level": 27
+    "level": 27,
+    "tags": ["investigation", "forbidden_knowledge"]
   },
   {
     "name": "Alpinista Corrompido pelo Frio",
     "category": "Person",
-    "level": 29
+    "level": 29,
+    "tags": ["survival", "corruption"]
   },
   {
     "name": "Sacerdote Exilado das Montanhas",
     "category": "Person",
-    "level": 32
+    "level": 32,
+    "tags": ["faith", "survival"]
   },
   {
     "name": "General das Neves Traído",
     "category": "Person",
-    "level": 34
+    "level": 34,
+    "tags": ["war", "betrayal"]
   },
   {
     "name": "Tomo Selado em Gelo Arcano",
     "category": "Mage",
-    "level": 28
+    "level": 28,
+    "tags": ["magic", "forbidden_knowledge"]
   },
   {
     "name": "Feitiço de Tempestade Sem Controle",
     "category": "Mage",
-    "level": 33
+    "level": 33,
+    "tags": ["magic", "containment"]
   },
   {
     "name": "Fortaleza Glacial Sitiada",
     "category": "Warrior",
-    "level": 26
+    "level": 26,
+    "tags": ["war", "assault"]
   },
   {
     "name": "Veterano das Guerras do Norte",
     "category": "Warrior",
-    "level": 31
+    "level": 31,
+    "tags": ["war", "investigation"]
   },
   {
     "name": "Passagem Secreta sob o Gelo",
     "category": "Rogue",
-    "level": 27
+    "level": 27,
+    "tags": ["stealth", "sabotage"]
   },
   {
     "name": "Identidade do Traidor da Guilda Fria",
     "category": "Rogue",
-    "level": 34
+    "level": 34,
+    "tags": ["investigation", "betrayal"]
   },
   {
     "name": "Relicário Congelado Profanado",
     "category": "Cleric",
-    "level": 29
+    "level": 29,
+    "tags": ["holy", "corruption"]
   },
   {
     "name": "Cerimônia de Gelo Interrompida",
     "category": "Cleric",
-    "level": 35
+    "level": 35,
+    "tags": ["ritual", "holy"]
   },
   {
     "name": "Golem de Pedra Ancestral",
     "category": "Monster",
-    "level": 36
+    "level": 36,
+    "tags": ["magic", "war"]
   },
   {
     "name": "Espectro do Arquiteto Louco",
     "category": "Monster",
-    "level": 39
+    "level": 39,
+    "tags": ["undead", "magic"]
   },
   {
     "name": "Colosso de Bronze Reativado",
     "category": "Monster",
-    "level": 43
+    "level": 43,
+    "tags": ["war", "magic"]
   },
   {
     "name": "Câmara de Armadilhas Ativas",
     "category": "Location",
-    "level": 37
+    "level": 37,
+    "tags": ["stealth", "survival"]
   },
   {
     "name": "Biblioteca Subterrânea Selada",
     "category": "Location",
-    "level": 40
+    "level": 40,
+    "tags": ["forbidden_knowledge", "investigation"]
   },
   {
     "name": "Trono do Imperador Morto-Vivo",
     "category": "Location",
-    "level": 44
+    "level": 44,
+    "tags": ["undead", "holy"]
   },
   {
     "name": "Fragmento de Pedra Filosofal",
     "category": "Item",
-    "level": 38
+    "level": 38,
+    "tags": ["magic", "valuable"]
   },
   {
     "name": "Cetro do Último Rei da Cidade",
     "category": "Item",
-    "level": 41
+    "level": 41,
+    "tags": ["valuable", "diplomacy"]
   },
   {
     "name": "Diário do Explorador Abissal",
     "category": "Item",
-    "level": 36
+    "level": 36,
+    "tags": ["investigation", "forbidden_knowledge"]
   },
   {
     "name": "Sobrevivente que Conhece o Centro",
     "category": "Person",
-    "level": 37
+    "level": 37,
+    "tags": ["investigation", "protection"]
   },
   {
     "name": "Arqueóloga Obcecada e Corrompida",
     "category": "Person",
-    "level": 40
+    "level": 40,
+    "tags": ["investigation", "corruption"]
   },
   {
     "name": "Descendente do Último Rei",
     "category": "Person",
-    "level": 43
+    "level": 43,
+    "tags": ["diplomacy", "protection"]
   },
   {
     "name": "Rede de Magia Instável das Ruínas",
     "category": "Mage",
-    "level": 36
+    "level": 36,
+    "tags": ["magic", "containment"]
   },
   {
     "name": "Entidade Arcana Presa na Pedra",
     "category": "Mage",
-    "level": 42
+    "level": 42,
+    "tags": ["summoning", "containment"]
   },
   {
     "name": "Armadura Animada do Guarda Real",
     "category": "Warrior",
-    "level": 38
+    "level": 38,
+    "tags": ["magic", "war"]
   },
   {
     "name": "Ordem dos Últimos Guardiões",
     "category": "Warrior",
-    "level": 44
+    "level": 44,
+    "tags": ["war", "protection"]
   },
   {
     "name": "Mapa das Câmaras do Tesouro",
     "category": "Rogue",
-    "level": 37
+    "level": 37,
+    "tags": ["investigation", "stealth"]
   },
   {
     "name": "Ladrão Preso na Câmara de Armadilhas",
     "category": "Rogue",
-    "level": 41
+    "level": 41,
+    "tags": ["crime", "survival"]
   },
   {
     "name": "Altar da Ressurreição Interrompida",
     "category": "Cleric",
-    "level": 39
+    "level": 39,
+    "tags": ["ritual", "undead"]
   },
   {
     "name": "Maldição do Clérigo Fundador",
     "category": "Cleric",
-    "level": 43
+    "level": 43,
+    "tags": ["corruption", "faith"]
   },
   {
     "name": "Demônio Maior do Abismo",
     "category": "Monster",
-    "level": 46
+    "level": 46,
+    "tags": ["summoning", "corruption"]
   },
   {
     "name": "Leviatã das Profundezas Ardentes",
     "category": "Monster",
-    "level": 49
+    "level": 49,
+    "tags": ["survival", "gore"]
   },
   {
     "name": "Anjo Caído Corrompido",
     "category": "Monster",
-    "level": 50
+    "level": 50,
+    "tags": ["faith", "corruption"]
   },
   {
     "name": "Cratera Central Instável",
     "category": "Location",
-    "level": 46
+    "level": 46,
+    "tags": ["survival", "containment"]
   },
   {
     "name": "Altar do Sacrifício Final",
     "category": "Location",
-    "level": 48
+    "level": 48,
+    "tags": ["ritual", "gore"]
   },
   {
     "name": "Núcleo da Destruição Ancestral",
     "category": "Location",
-    "level": 50
+    "level": 50,
+    "tags": ["containment", "magic"]
   },
   {
     "name": "Fragmento do Deus Morto",
     "category": "Item",
-    "level": 47
+    "level": 47,
+    "tags": ["magic", "holy"]
   },
   {
     "name": "Corrente que Prende o Caos",
     "category": "Item",
-    "level": 49
+    "level": 49,
+    "tags": ["containment", "magic"]
   },
   {
     "name": "Lacre do Portal Primordial",
     "category": "Item",
-    "level": 50
+    "level": 50,
+    "tags": ["containment", "magic"]
   },
   {
     "name": "Último Sobrevivente da Destruição",
     "category": "Person",
-    "level": 46
+    "level": 46,
+    "tags": ["investigation", "survival"]
   },
   {
     "name": "Arauto do Caos Encarnado",
     "category": "Person",
-    "level": 48
+    "level": 48,
+    "tags": ["corruption", "war"]
   },
   {
     "name": "Herói Corrompido pela Cratera",
     "category": "Person",
-    "level": 50
+    "level": 50,
+    "tags": ["corruption", "war"]
   },
   {
     "name": "Tomo do Fim de Tudo",
     "category": "Mage",
-    "level": 47
+    "level": 47,
+    "tags": ["forbidden_knowledge", "magic"]
   },
   {
     "name": "Ritual de Abertura do Véu Final",
     "category": "Mage",
-    "level": 50
+    "level": 50,
+    "tags": ["ritual", "magic"]
   },
   {
     "name": "Colosso de Guerra do Apocalipse",
     "category": "Warrior",
-    "level": 48
+    "level": 48,
+    "tags": ["war", "magic"]
   },
   {
     "name": "Estandarte da Legião Destruidora",
     "category": "Warrior",
-    "level": 50
+    "level": 50,
+    "tags": ["war", "valuable"]
   },
   {
     "name": "Segredo que Destruiu a Civilização",
     "category": "Rogue",
-    "level": 47
+    "level": 47,
+    "tags": ["forbidden_knowledge", "blackmail"]
   },
   {
     "name": "Identidade do Traidor Original",
     "category": "Rogue",
-    "level": 49
+    "level": 49,
+    "tags": ["betrayal", "investigation"]
   },
   {
     "name": "Relíquia do Deus que Foi Morto",
     "category": "Cleric",
-    "level": 46
+    "level": 46,
+    "tags": ["holy", "valuable"]
   },
   {
     "name": "Profecia do Segundo Colapso",
     "category": "Cleric",
-    "level": 50
+    "level": 50,
+    "tags": ["faith", "forbidden_knowledge"]
   }
 ]

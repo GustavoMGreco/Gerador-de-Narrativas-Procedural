@@ -7,7 +7,7 @@ services:
       POSTGRES_PASSWORD: adminpassword
       POSTGRES_DB: gerador_quests
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     restart: unless-stopped
@@ -22,6 +22,9 @@ services:
       - db
     environment:
       DATABASE_URL: "postgresql://admin:adminpassword@db:5432/gerador_quests?schema=public"
+    volumes:
+      - .:/app
+      - /app/node_modules
     restart: unless-stopped
 
 volumes:
