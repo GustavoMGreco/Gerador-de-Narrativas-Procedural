@@ -64,12 +64,20 @@ export class QuestsService {
   let count = await this.prisma.target.count({ where: targetFilter });
 
   if (count === 0 && tagsArray.length > 0) {
-    count = await this.prisma.target.count({ where: basetFilter });
+    const filterSemNivel = {
+      category: { in: allowedCategories },
+      tags: { hasSome: tagsArray }
+    };
+    
+    count = await this.prisma.target.count({ where: filterSemNivel });
+    
+    if (count > 0) {
+      delete targetFilter.level; 
+    } else {
+      delete targetFilter.tags;
+      count = await this.prisma.target.count({ where: targetFilter });
+    };
   };
-
-  if (count > 0) {
-    delete targetFilter.tags;
-  }
 
   if (count === 0) {
     // fallback: se não achar um alvo perfeito, pega qualquer um da categoria
